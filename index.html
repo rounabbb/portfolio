@@ -3,287 +3,474 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rounab · Lead Revive — Web Designer for Indian-Owned Businesses in the USA</title>
-<meta name="description" content="I build websites that turn visitors into customers — for Indian-owned restaurants, motels, jewelers, and small businesses across the USA. Pay only if you love it.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='72' font-size='80' font-weight='900' text-anchor='middle' fill='%23059669' font-family='Inter,sans-serif'>R</text></svg>">
+<title>Rounab · Lead Revive — From India Serving USA</title>
+<meta name="description" content="I build custom websites for businesses across the United States. You only pay if you love what I build. From India, serving the USA.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23059669'/%3E%3Ctext x='50' y='72' text-anchor='middle' font-family='Inter,sans-serif' font-size='70' font-weight='800' fill='white'%3ER%3C/text%3E%3C/svg%3E">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --primary: #0F172A;
-    --accent: #059669;
-    --accent-hover: #047857;
-    --bg: #FFFFFF;
-    --bg-alt: #F8FAFC;
-    --border: #E2E8F0;
-    --body: #334155;
-    --muted: #64748B;
-  }
-  * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: 'Inter', sans-serif;
-    color: var(--body);
-    background: var(--bg);
-    overflow-x: hidden;
-  }
-  .font-serif { font-family: 'Instrument Serif', serif; font-weight: 400; letter-spacing: -0.01em; }
-  .text-primary { color: var(--primary); }
-  .text-accent { color: var(--accent); }
-  .text-muted { color: var(--muted); }
-  .bg-accent { background-color: var(--accent); }
-  .bg-accent-hover:hover { background-color: var(--accent-hover); }
-  .bg-primary-dark { background-color: var(--primary); }
-  .bg-alt { background-color: var(--bg-alt); }
-  .border-soft { border-color: var(--border); }
+:root {
+  --primary: #0F172A;
+  --accent: #059669;
+  --accent-hover: #047857;
+  --soft-white: #FFFFFF;
+  --muted-bg: #F8FAFC;
+  --border: #E2E8F0;
+  --body: #334155;
+  --muted: #64748B;
+}
+* { -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--body);
+  background: var(--soft-white);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+.font-serif { font-family: 'Instrument Serif', serif; font-weight: 400; letter-spacing: -0.01em; }
+.font-sans { font-family: 'Inter', sans-serif; }
+.text-primary { color: var(--primary); }
+.text-accent { color: var(--accent); }
+.text-muted { color: var(--muted); }
+.text-body { color: var(--body); }
+.bg-accent { background: var(--accent); }
+.bg-muted-bg { background: var(--muted-bg); }
+.bg-primary { background: var(--primary); }
+.border-soft { border-color: var(--border); }
 
-  /* Fluid typography */
-  .h-display { font-family: 'Instrument Serif', serif; font-size: clamp(2.5rem, 6.5vw, 4.75rem); line-height: 1.05; letter-spacing: -0.02em; color: var(--primary); }
-  .h-section { font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.01em; color: var(--primary); }
-  .h-sub { font-size: clamp(1rem, 1.6vw, 1.15rem); line-height: 1.6; color: var(--muted); }
+/* Typography */
+h1, h2, h3 { color: var(--primary); }
+.display-xl { font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(2.5rem, 6.5vw, 4.75rem); line-height: 1.05; letter-spacing: -0.02em; }
+.display-lg { font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.015em; }
+.display-md { font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.15; }
+.eyebrow { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
 
-  /* Buttons */
-  .btn {
-    display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
-    padding: 0.95rem 1.6rem; border-radius: 10px; font-weight: 600; font-size: 0.98rem;
-    min-height: 48px; transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer; white-space: nowrap;
-  }
-  .btn-primary { background: var(--primary); color: #fff; }
-  .btn-primary:hover { background: #1e293b; transform: translateY(-2px) scale(1.02); box-shadow: 0 10px 30px rgba(15,23,42,0.25); }
-  .btn-accent { background: var(--accent); color: #fff; }
-  .btn-accent:hover { background: var(--accent-hover); transform: translateY(-2px) scale(1.02); box-shadow: 0 10px 30px rgba(5,150,105,0.3); }
-  .btn-outline { background: transparent; color: var(--primary); border: 1.5px solid var(--border); }
-  .btn-outline:hover { border-color: var(--primary); transform: translateY(-2px) scale(1.02); }
-  .btn-outline-white { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.3); }
-  .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,0.05); transform: translateY(-2px) scale(1.02); }
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 0.5rem;
+  padding: 0.95rem 1.6rem;
+  min-height: 48px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  white-space: nowrap;
+}
+.btn-primary { background: var(--primary); color: #fff; border-color: var(--primary); }
+.btn-primary:hover { background: #1e293b; border-color: #1e293b; transform: translateY(-2px) scale(1.02); box-shadow: 0 10px 24px rgba(15, 23, 42, 0.18); }
+.btn-accent { background: var(--accent); color: #fff; border-color: var(--accent); }
+.btn-accent:hover { background: var(--accent-hover); border-color: var(--accent-hover); transform: translateY(-2px) scale(1.02); box-shadow: 0 10px 24px rgba(5, 150, 105, 0.3); }
+.btn-outline { background: transparent; color: var(--primary); border-color: var(--border); }
+.btn-outline:hover { border-color: var(--primary); transform: translateY(-2px); }
+.btn-outline-white { background: transparent; color: #fff; border-color: rgba(255,255,255,0.3); }
+.btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,0.08); transform: translateY(-2px); }
 
-  .card-shadow { box-shadow: 0 4px 24px rgba(15, 23, 42, 0.08); }
-  .card-shadow-lg { box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12); }
+/* Nav */
+.nav-wrap {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  background: transparent;
+}
+.nav-wrap.scrolled { background: rgba(255,255,255,0.92); backdrop-filter: saturate(180%) blur(14px); box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06); }
+.nav-link {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--body);
+  position: relative;
+  padding: 8px 2px;
+  transition: color 300ms ease;
+}
+.nav-link:hover { color: var(--primary); }
+.nav-link::after {
+  content: ''; position: absolute;
+  left: 0; bottom: 0;
+  width: 0; height: 2px;
+  background: var(--accent);
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-link:hover::after { width: 100%; }
 
-  /* Nav */
-  .nav { transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1); }
-  .nav.scrolled { background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); box-shadow: 0 2px 20px rgba(15,23,42,0.06); }
+/* Hero */
+.hero { min-height: 100vh; display: flex; align-items: center; position: relative; padding-top: 80px; padding-bottom: 60px; }
+.hero-gradient {
+  position: absolute; inset: 0;
+  background: 
+    radial-gradient(ellipse 800px 600px at 80% 20%, rgba(5,150,105,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 600px 400px at 10% 80%, rgba(5,150,105,0.05) 0%, transparent 60%),
+    linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+  pointer-events: none;
+}
+.available-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 14px;
+  background: rgba(5, 150, 105, 0.08);
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 600;
+  border-radius: 100px;
+  border: 1px solid rgba(5, 150, 105, 0.15);
+}
+.available-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent);
+  animation: pulseGreen 2s infinite;
+}
+@keyframes pulseGreen {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(5,150,105,0.5); }
+  50% { box-shadow: 0 0 0 8px rgba(5,150,105,0); }
+}
+.trust-row {
+  display: flex; flex-wrap: wrap;
+  gap: 1.25rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+  font-weight: 500;
+}
 
-  /* Fade-up animation */
-  .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 700ms cubic-bezier(0.4,0,0.2,1), transform 700ms cubic-bezier(0.4,0,0.2,1); }
-  .fade-up.visible { opacity: 1; transform: translateY(0); }
+/* Portrait */
+.portrait-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 1;
+  margin: 0 auto;
+}
+.portrait-blob {
+  position: absolute;
+  inset: -8%;
+  background: radial-gradient(circle, rgba(5,150,105,0.18) 0%, rgba(5,150,105,0.06) 50%, transparent 75%);
+  border-radius: 50%;
+  filter: blur(20px);
+  z-index: 0;
+  animation: blobFloat 8s ease-in-out infinite;
+}
+@keyframes blobFloat {
+  0%, 100% { transform: scale(1) translate(0,0); }
+  50% { transform: scale(1.05) translate(10px, -10px); }
+}
+.portrait-img {
+  position: relative; z-index: 1;
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.15);
+  border: 6px solid #fff;
+}
 
-  /* Hero blob */
-  .blob {
-    position: absolute; width: 110%; height: 110%; top: -5%; left: -5%;
-    background: radial-gradient(circle, rgba(5,150,105,0.18) 0%, rgba(5,150,105,0.04) 50%, transparent 70%);
-    filter: blur(40px); z-index: 0; border-radius: 50%;
-    animation: blobFloat 8s ease-in-out infinite;
-  }
-  @keyframes blobFloat {
-    0%,100% { transform: translate(0,0) scale(1); }
-    50% { transform: translate(10px,-10px) scale(1.05); }
-  }
+/* Stagger hero */
+.stagger > * { opacity: 0; transform: translateY(24px); animation: staggerUp 800ms cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+@keyframes staggerUp { to { opacity: 1; transform: translateY(0); } }
+.stagger > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger > *:nth-child(2) { animation-delay: 0.25s; }
+.stagger > *:nth-child(3) { animation-delay: 0.4s; }
+.stagger > *:nth-child(4) { animation-delay: 0.55s; }
+.stagger > *:nth-child(5) { animation-delay: 0.7s; }
 
-  /* Hero grid bg */
-  .hero-bg {
-    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-    position: relative;
-  }
-  .hero-bg::before {
-    content: ''; position: absolute; inset: 0;
-    background-image: radial-gradient(circle at 1px 1px, rgba(15,23,42,0.04) 1px, transparent 0);
-    background-size: 32px 32px;
-    mask-image: linear-gradient(180deg, rgba(0,0,0,0.5), transparent 70%);
-    -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0.5), transparent 70%);
-  }
+/* Fade up on scroll */
+.fade-up { opacity: 0; transform: translateY(28px); transition: opacity 700ms cubic-bezier(0.4, 0, 0.2, 1), transform 700ms cubic-bezier(0.4, 0, 0.2, 1); }
+.fade-up.in { opacity: 1; transform: translateY(0); }
 
-  /* Portrait */
-  .portrait-wrap { position: relative; display: inline-block; }
-  .portrait {
-    width: clamp(260px, 42vw, 460px); aspect-ratio: 1; border-radius: 50%;
-    object-fit: cover; position: relative; z-index: 2;
-    border: 8px solid #fff; box-shadow: 0 30px 80px rgba(15,23,42,0.18);
-  }
+/* Process */
+.step-circle {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  box-shadow: 0 8px 20px rgba(5, 150, 105, 0.25);
+}
+.process-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.75rem;
+  transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+}
+.process-card:hover {
+  border-color: rgba(5,150,105,0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
 
-  /* Process connecting line */
-  .process-line {
-    position: absolute; top: 28px; left: 0; right: 0; height: 2px;
-    background: linear-gradient(90deg, transparent, var(--border) 10%, var(--border) 90%, transparent);
-    z-index: 0;
-  }
-  @media (max-width: 768px) {
-    .process-line { left: 28px; right: auto; top: 0; bottom: 0; width: 2px; height: 100%;
-      background: linear-gradient(180deg, transparent, var(--border) 5%, var(--border) 95%, transparent); }
-  }
+/* Project card */
+.project-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex; flex-direction: column;
+  height: 100%;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.12);
+  border-color: rgba(5,150,105,0.2);
+}
+.project-img-wrap {
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  background: var(--muted-bg);
+}
+.project-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.project-card:hover .project-img { transform: scale(1.05); }
+.project-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.project-link {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex; align-items: center; gap: 6px;
+  transition: gap 300ms ease;
+}
+.project-card:hover .project-link { gap: 12px; }
 
-  /* Project card */
-  .project-card { transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1); overflow: hidden; }
-  .project-card:hover { transform: translateY(-8px); box-shadow: 0 30px 60px rgba(15,23,42,0.15); }
-  .project-card .proj-img { transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1); }
-  .project-card:hover .proj-img { transform: scale(1.05); }
+/* Niche card */
+.niche-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: left;
+}
+.niche-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.07);
+}
+.niche-emoji { font-size: 2rem; display: block; margin-bottom: 0.75rem; }
 
-  /* Niche card */
-  .niche-card { transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1); border: 1.5px solid var(--border); }
-  .niche-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 15px 35px rgba(5,150,105,0.1); }
+/* Pricing */
+.pricing-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  max-width: 560px;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+  transition: box-shadow 800ms ease;
+}
+.pricing-card.glow { box-shadow: 0 20px 80px rgba(5, 150, 105, 0.18), 0 0 0 1px rgba(5, 150, 105, 0.1); }
+.pricing-badge {
+  position: absolute;
+  top: -14px; left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+.check-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+}
+.check-icon {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: rgba(5,150,105,0.12);
+  color: var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
 
-  /* Pricing card glow */
-  .pricing-card { position: relative; transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1); }
-  .pricing-card.visible { box-shadow: 0 0 0 1px var(--border), 0 30px 80px rgba(5,150,105,0.12), 0 10px 30px rgba(15,23,42,0.08); }
+/* FAQ */
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  transition: all 300ms ease;
+}
+.faq-btn {
+  width: 100%;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.4rem 0;
+  text-align: left;
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  color: var(--primary);
+  cursor: pointer;
+  gap: 1rem;
+  min-height: 48px;
+}
+.faq-chevron { transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1); flex-shrink: 0; color: var(--accent); }
+.faq-item.open .faq-chevron { transform: rotate(180deg); }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 400ms cubic-bezier(0.4, 0, 0.2, 1), padding 400ms ease;
+}
+.faq-item.open .faq-answer { padding-bottom: 1.4rem; }
+.faq-answer p { color: var(--body); line-height: 1.7; }
 
-  /* FAQ */
-  .faq-item { border-bottom: 1px solid var(--border); }
-  .faq-q { cursor: pointer; padding: 1.5rem 0; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
-  .faq-a { max-height: 0; overflow: hidden; transition: max-height 500ms cubic-bezier(0.4, 0, 0.2, 1), padding 300ms; }
-  .faq-item.open .faq-a { max-height: 500px; padding-bottom: 1.5rem; }
-  .faq-chevron { transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1); flex-shrink: 0; }
-  .faq-item.open .faq-chevron { transform: rotate(180deg); }
+/* Mobile menu */
+.mobile-menu-backdrop {
+  position: fixed; inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  opacity: 0; pointer-events: none;
+  transition: opacity 300ms ease;
+  z-index: 60;
+}
+.mobile-menu-backdrop.open { opacity: 1; pointer-events: auto; }
+.mobile-menu {
+  position: fixed; top: 0; right: 0; bottom: 0;
+  width: 85%; max-width: 360px;
+  background: #fff;
+  transform: translateX(100%);
+  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 61;
+  padding: 1.5rem;
+  display: flex; flex-direction: column;
+  overflow-y: auto;
+}
+.mobile-menu.open { transform: translateX(0); }
+.mobile-link {
+  display: block;
+  padding: 14px 0;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--primary);
+  border-bottom: 1px solid var(--border);
+  min-height: 48px;
+}
 
-  /* Floating WhatsApp */
-  .fab {
-    position: fixed; bottom: 20px; right: 20px; width: 58px; height: 58px;
-    border-radius: 50%; background: var(--accent); color: #fff;
-    display: flex; align-items: center; justify-content: center; z-index: 90;
-    box-shadow: 0 10px 30px rgba(5,150,105,0.4); transition: all 300ms;
-  }
-  .fab:hover { background: var(--accent-hover); transform: scale(1.08); }
-  .fab::before {
-    content: ''; position: absolute; inset: -8px; border-radius: 50%;
-    background: rgba(5,150,105,0.3); z-index: -1; animation: pulse 3s infinite;
-  }
-  @keyframes pulse {
-    0%,100% { transform: scale(1); opacity: 0.7; }
-    50% { transform: scale(1.25); opacity: 0; }
-  }
+/* Floating WhatsApp */
+.float-wa {
+  position: fixed;
+  bottom: 20px; right: 20px;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: #059669;
+  color: #fff;
+  display: none;
+  align-items: center; justify-content: center;
+  box-shadow: 0 10px 24px rgba(5, 150, 105, 0.4);
+  z-index: 40;
+  animation: floatPulse 3s infinite;
+}
+@keyframes floatPulse {
+  0%, 100% { box-shadow: 0 10px 24px rgba(5, 150, 105, 0.4); transform: scale(1); }
+  50% { box-shadow: 0 10px 32px rgba(5, 150, 105, 0.6); transform: scale(1.05); }
+}
+@media (max-width: 1023px) { .float-wa { display: flex; } }
 
-  /* Mobile menu */
-  .mobile-menu {
-    position: fixed; top: 0; right: 0; bottom: 0; width: min(85%, 380px);
-    background: #fff; z-index: 110; transform: translateX(100%);
-    transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: -10px 0 40px rgba(15,23,42,0.15);
-  }
-  .mobile-menu.open { transform: translateX(0); }
-  .mobile-overlay {
-    position: fixed; inset: 0; background: rgba(15,23,42,0.5); z-index: 105;
-    opacity: 0; pointer-events: none; transition: opacity 300ms;
-  }
-  .mobile-overlay.open { opacity: 1; pointer-events: auto; }
-
-  /* Accent badge */
-  .badge-pulse {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    padding: 0.4rem 0.9rem; border-radius: 999px;
-    background: rgba(5,150,105,0.08); color: var(--accent);
-    font-size: 0.82rem; font-weight: 600; border: 1px solid rgba(5,150,105,0.2);
-  }
-  .badge-pulse .dot {
-    width: 8px; height: 8px; border-radius: 50%; background: var(--accent);
-    animation: pulse-dot 2s infinite;
-  }
-  @keyframes pulse-dot {
-    0%,100% { box-shadow: 0 0 0 0 rgba(5,150,105,0.6); }
-    50% { box-shadow: 0 0 0 6px rgba(5,150,105,0); }
-  }
-
-  .check-icon {
-    flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%;
-    background: rgba(5,150,105,0.12); color: var(--accent);
-    display: inline-flex; align-items: center; justify-content: center;
-    margin-top: 2px;
-  }
-
-  @media (min-width: 1024px) {
-    .fab { display: none; }
-  }
-
-  /* Container */
-  .container-c { max-width: 1200px; margin: 0 auto; padding-left: 1.25rem; padding-right: 1.25rem; }
-  @media (min-width: 768px) { .container-c { padding-left: 2rem; padding-right: 2rem; } }
-
-  a { transition: color 200ms; }
-  .nav-link:hover { color: var(--accent); }
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .btn { width: 100%; }
+  .hero-ctas { flex-direction: column; width: 100%; }
+}
 </style>
 </head>
 <body>
 
 <!-- ============================================= -->
-<!-- SECTION: STICKY NAVIGATION                     -->
+<!-- SECTION: NAVIGATION BAR                        -->
 <!-- ============================================= -->
-<nav class="nav fixed top-0 left-0 right-0 z-50 py-4">
-  <div class="container-c flex items-center justify-between">
-    <a href="#" class="flex items-baseline gap-2">
-      <span class="font-bold text-lg text-primary">Rounab</span>
-      <span class="text-sm text-muted hidden sm:inline">· Lead Revive</span>
+<header class="nav-wrap" id="navWrap">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-8 py-4 flex items-center justify-between">
+    <a href="#top" class="flex items-baseline gap-2">
+      <span class="font-bold text-lg md:text-xl text-primary">Rounab</span>
+      <span class="text-sm text-muted font-normal hidden sm:inline">· Lead Revive</span>
     </a>
-    <div class="hidden lg:flex items-center gap-8">
-      <a href="#work" class="nav-link text-sm font-medium text-primary">Work</a>
-      <a href="#process" class="nav-link text-sm font-medium text-primary">Process</a>
-      <a href="#pricing" class="nav-link text-sm font-medium text-primary">Pricing</a>
-      <a href="#faq" class="nav-link text-sm font-medium text-primary">FAQ</a>
-      <a href="#contact" class="nav-link text-sm font-medium text-primary">Contact</a>
-    </div>
-    <div class="flex items-center gap-3">
-      <a href="https://wa.me/918282036966" target="_blank" rel="noopener" class="btn btn-accent bg-accent-hover hidden md:inline-flex" style="padding: 0.7rem 1.1rem; font-size: 0.9rem; min-height: 42px;">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-        WhatsApp
+    <nav class="hidden lg:flex items-center gap-9">
+      <a href="#work" class="nav-link">Work</a>
+      <a href="#process" class="nav-link">Process</a>
+      <a href="#pricing" class="nav-link">Pricing</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <!-- REPLACE WhatsApp number -->
+      <a href="https://wa.me/918282036966" target="_blank" rel="noopener" class="hidden md:inline-flex btn btn-accent" style="padding: 0.6rem 1.1rem; min-height: 44px; font-size: 0.88rem;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Message on WhatsApp
       </a>
-      <button id="menuBtn" class="lg:hidden p-2 text-primary" aria-label="Open menu">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <button id="menuBtn" class="lg:hidden p-2" style="min-width: 44px; min-height: 44px;" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
-</nav>
+</header>
 
-<!-- Mobile menu -->
-<div id="mobileOverlay" class="mobile-overlay"></div>
-<div id="mobileMenu" class="mobile-menu p-8 flex flex-col">
-  <div class="flex items-center justify-between mb-10">
-    <span class="font-bold text-lg text-primary">Rounab</span>
-    <button id="closeBtn" class="p-2 text-primary" aria-label="Close menu">
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+<!-- Mobile Menu -->
+<div class="mobile-menu-backdrop" id="menuBackdrop"></div>
+<aside class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+  <div class="flex justify-between items-center mb-6">
+    <div class="flex items-baseline gap-2">
+      <span class="font-bold text-lg text-primary">Rounab</span>
+      <span class="text-sm text-muted">· Lead Revive</span>
+    </div>
+    <button id="menuClose" class="p-2" style="min-width: 44px; min-height: 44px;" aria-label="Close menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 6L6 18M6 6l12 12"/></svg>
     </button>
   </div>
-  <div class="flex flex-col gap-5 text-lg">
-    <a href="#work" class="mobile-link text-primary font-medium">Work</a>
-    <a href="#process" class="mobile-link text-primary font-medium">Process</a>
-    <a href="#pricing" class="mobile-link text-primary font-medium">Pricing</a>
-    <a href="#faq" class="mobile-link text-primary font-medium">FAQ</a>
-    <a href="#contact" class="mobile-link text-primary font-medium">Contact</a>
-  </div>
-  <a href="https://wa.me/918282036966" target="_blank" rel="noopener" class="btn btn-accent bg-accent-hover mt-8">Message on WhatsApp →</a>
-</div>
+  <a href="#work" class="mobile-link m-link">Work</a>
+  <a href="#process" class="mobile-link m-link">Process</a>
+  <a href="#pricing" class="mobile-link m-link">Pricing</a>
+  <a href="#faq" class="mobile-link m-link">FAQ</a>
+  <a href="#contact" class="mobile-link m-link">Contact</a>
+  <!-- REPLACE WhatsApp number -->
+  <a href="https://wa.me/918282036966" target="_blank" rel="noopener" class="btn btn-accent mt-6 w-full">Message on WhatsApp</a>
+</aside>
 
 <!-- ============================================= -->
 <!-- SECTION: HERO                                  -->
 <!-- ============================================= -->
-<section class="hero-bg relative pt-32 pb-20 lg:pt-40 lg:pb-28 min-h-screen flex items-center">
-  <div class="container-c w-full relative z-10">
+<section id="top" class="hero">
+  <div class="hero-gradient"></div>
+  <div class="max-w-[1200px] mx-auto px-5 md:px-8 w-full relative">
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-      <div>
-        <div class="fade-up" style="transition-delay: 0ms;">
-          <span class="badge-pulse"><span class="dot"></span>Available for new projects</span>
+      <div class="stagger order-2 lg:order-1">
+        <div class="available-badge">
+          <span class="available-dot"></span>
+          <span>Available for new projects</span>
         </div>
-        <h1 class="h-display mt-6 fade-up" style="transition-delay: 150ms;">
-          I build websites that turn <em class="text-accent not-italic" style="font-style: italic;">visitors into customers.</em>
-        </h1>
-        <p class="h-sub mt-6 max-w-xl fade-up" style="transition-delay: 300ms;">
-          For Indian-owned restaurants, motels, jewelers, and small businesses across the United States. You only pay if you love what I build.
+        <h1 class="display-xl mt-6 mb-5 text-primary">I build websites that turn visitors into customers.</h1>
+        <p class="text-lg md:text-xl text-muted leading-relaxed mb-8 max-w-xl">
+          For restaurants, motels, med spas, jewelers, and small businesses across the United States. You only pay if you love what I build.
         </p>
-        <div class="mt-8 flex flex-col sm:flex-row gap-3 fade-up" style="transition-delay: 450ms;">
+        <div class="hero-ctas flex flex-wrap gap-3 mb-8">
+          <!-- REPLACE WhatsApp number -->
           <a href="https://wa.me/918282036966" target="_blank" rel="noopener" class="btn btn-primary">Message on WhatsApp →</a>
           <a href="#work" class="btn btn-outline">See My Work ↓</a>
         </div>
-        <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted fade-up" style="transition-delay: 600ms;">
+        <div class="trust-row">
           <span>🇮🇳 Based in India</span>
-          <span class="hidden sm:inline text-border-soft">·</span>
           <span>🇺🇸 Serving USA</span>
-          <span class="hidden sm:inline">·</span>
           <span>💬 WhatsApp First</span>
         </div>
       </div>
-      <div class="flex justify-center lg:justify-end fade-up" style="transition-delay: 400ms;">
-        <div class="portrait-wrap">
-          <div class="blob"></div>
-          <img src="https://i.imgur.com/O0dYkiG.png" alt="Rounab, Web Designer at Lead Revive" class="portrait">
+      <div class="order-1 lg:order-2">
+        <div class="portrait-wrap stagger">
+          <div class="portrait-blob" style="animation-delay:0s;"></div>
+          <!-- REPLACE: real headshot URL here -->
+          <img src="https://i.imgur.com/O0dYkiG.png" alt="Rounab — Web Designer & Developer" class="portrait-img">
         </div>
       </div>
     </div>
@@ -291,35 +478,35 @@
 </section>
 
 <!-- ============================================= -->
-<!-- SECTION: PROCESS — HOW IT WORKS                -->
+<!-- SECTION: HOW IT WORKS / PROCESS                -->
 <!-- ============================================= -->
-<section id="process" class="py-20 lg:py-28 bg-alt">
-  <div class="container-c">
-    <div class="text-center max-w-2xl mx-auto mb-16 fade-up">
-      <h2 class="h-section">A website with zero risk to you</h2>
-      <p class="h-sub mt-4">No upfront payment. No long contracts. No surprises.</p>
+<section id="process" class="py-20 md:py-28 bg-muted-bg">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-8">
+    <div class="max-w-3xl mx-auto text-center mb-14 md:mb-20">
+      <p class="eyebrow mb-4 fade-up">How it works</p>
+      <h2 class="display-lg mb-5 fade-up">A website with zero risk to you</h2>
+      <p class="text-lg text-muted fade-up">No upfront payment. No long contracts. No surprises.</p>
     </div>
-    <div class="relative grid md:grid-cols-4 gap-10 md:gap-6">
-      <div class="process-line hidden md:block"></div>
-      <div class="fade-up relative" style="transition-delay: 0ms;">
-        <div class="w-14 h-14 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg relative z-10 mx-auto md:mx-0" style="box-shadow: 0 8px 20px rgba(5,150,105,0.3);">1</div>
-        <h3 class="font-serif text-2xl text-primary mt-5 text-center md:text-left">You tell me about your business</h3>
-        <p class="mt-3 text-muted leading-relaxed text-center md:text-left">15-minute WhatsApp chat. I learn your business, your customers, what you need.</p>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="process-card fade-up">
+        <div class="step-circle mb-5">1</div>
+        <h3 class="font-serif text-2xl mb-3 text-primary">You tell me about your business</h3>
+        <p class="text-body">15-minute WhatsApp chat. I learn your business, your customers, what you need.</p>
       </div>
-      <div class="fade-up relative" style="transition-delay: 150ms;">
-        <div class="w-14 h-14 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg relative z-10 mx-auto md:mx-0" style="box-shadow: 0 8px 20px rgba(5,150,105,0.3);">2</div>
-        <h3 class="font-serif text-2xl text-primary mt-5 text-center md:text-left">I build your website — for free</h3>
-        <p class="mt-3 text-muted leading-relaxed text-center md:text-left">In 5-7 days, I build a complete custom website. Real design, real copy, ready to launch.</p>
+      <div class="process-card fade-up">
+        <div class="step-circle mb-5">2</div>
+        <h3 class="font-serif text-2xl mb-3 text-primary">I build your website — for free</h3>
+        <p class="text-body">In 5–7 days, I build a complete custom website. Real design, real copy, ready to launch.</p>
       </div>
-      <div class="fade-up relative" style="transition-delay: 300ms;">
-        <div class="w-14 h-14 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg relative z-10 mx-auto md:mx-0" style="box-shadow: 0 8px 20px rgba(5,150,105,0.3);">3</div>
-        <h3 class="font-serif text-2xl text-primary mt-5 text-center md:text-left">You review and decide</h3>
-        <p class="mt-3 text-muted leading-relaxed text-center md:text-left">I send you the live preview. You show your family, take your time. No pressure.</p>
+      <div class="process-card fade-up">
+        <div class="step-circle mb-5">3</div>
+        <h3 class="font-serif text-2xl mb-3 text-primary">You review and decide</h3>
+        <p class="text-body">I send you the live preview. You show your family, take your time. No pressure.</p>
       </div>
-      <div class="fade-up relative" style="transition-delay: 450ms;">
-        <div class="w-14 h-14 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg relative z-10 mx-auto md:mx-0" style="box-shadow: 0 8px 20px rgba(5,150,105,0.3);">4</div>
-        <h3 class="font-serif text-2xl text-primary mt-5 text-center md:text-left">You pay only if you love it</h3>
-        <p class="mt-3 text-muted leading-relaxed text-center md:text-left">If yes, I launch it on your domain. If no, zero cost. You keep the screenshots.</p>
+      <div class="process-card fade-up">
+        <div class="step-circle mb-5">4</div>
+        <h3 class="font-serif text-2xl mb-3 text-primary">You pay only if you love it</h3>
+        <p class="text-body">If yes, I launch it on your domain. If no, zero cost. You keep the screenshots.</p>
       </div>
     </div>
   </div>
@@ -327,106 +514,128 @@
 
 <!-- ============================================= -->
 <!-- SECTION: WORK / PROJECTS                       -->
+<!-- To add a new project, copy a PROJECT CARD      -->
+<!-- block below and update the content             -->
 <!-- ============================================= -->
-<section id="work" class="py-20 lg:py-28">
-  <div class="container-c">
-    <div class="text-center max-w-2xl mx-auto mb-16 fade-up">
-      <h2 class="h-section">Recent Work</h2>
-      <p class="h-sub mt-4">Live demo websites I've built. Tap any one to explore.</p>
+<section id="work" class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-8">
+    <div class="max-w-3xl mb-14 md:mb-16">
+      <p class="eyebrow mb-4 fade-up">Portfolio</p>
+      <h2 class="display-lg mb-5 fade-up">Recent Work</h2>
+      <p class="text-lg text-muted fade-up">Live demo websites I've built. Tap any one to explore.</p>
     </div>
 
     <!-- =========================================== -->
     <!-- PROJECT CARDS — ADD NEW PROJECTS HERE        -->
-    <!-- Copy a PROJECT CARD block below to add one   -->
+    <!-- Copy one card block below to add a project   -->
     <!-- =========================================== -->
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
+    <div class="grid md:grid-cols-2 gap-6">
 
       <!-- PROJECT CARD START -->
-      <div class="project-card bg-white rounded-2xl card-shadow fade-up border border-soft" style="border-color: var(--border);">
-        <div class="overflow-hidden rounded-t-2xl aspect-[4/3]">
-          <!-- REPLACE with real motel demo screenshot -->
-          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800" alt="Magnolia Inn & Suites — motel website demo" class="proj-img w-full h-full object-cover">
+      <article class="project-card fade-up">
+        <div class="project-img-wrap">
+          <!-- REPLACE: screenshot of motel demo -->
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800" alt="Magnolia Inn & Suites website screenshot" class="project-img" loading="lazy">
         </div>
-        <div class="p-6">
-          <span class="text-xs font-semibold tracking-widest uppercase text-accent">Hospitality</span>
-          <h3 class="font-serif text-2xl text-primary mt-2">Magnolia Inn & Suites</h3>
-          <p class="text-muted mt-3 leading-relaxed">Direct booking site for a family-owned motel in Georgia. Saves 15-18% on Expedia commissions.</p>
-          <a href="https://motelwebsite.rounab.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-5 font-semibold text-accent hover:text-accent-hover transition">
-            View Live Demo →
-          </a>
+        <div class="p-6 flex flex-col flex-1">
+          <span class="project-tag mb-2">Hospitality</span>
+          <h3 class="font-serif text-2xl mb-2 text-primary">Magnolia Inn & Suites</h3>
+          <p class="text-body mb-5 flex-1">Direct booking site for a family-owned motel in Georgia. Saves 15–18% on Expedia commissions.</p>
+          <a href="https://motelwebsite.rounab.com" target="_blank" rel="noopener" class="project-link">View Live Demo →</a>
         </div>
-      </div>
+      </article>
       <!-- PROJECT CARD END -->
 
       <!-- PROJECT CARD START -->
-      <div class="project-card bg-white rounded-2xl card-shadow fade-up border border-soft" style="border-color: var(--border); transition-delay: 150ms;">
-        <div class="overflow-hidden rounded-t-2xl aspect-[4/3]">
-          <!-- REPLACE with real jewelry demo screenshot -->
-          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800" alt="Shreenath Jewelers — jewelry store website demo" class="proj-img w-full h-full object-cover">
+      <article class="project-card fade-up">
+        <div class="project-img-wrap">
+          <!-- REPLACE: screenshot of jewelry demo -->
+          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800" alt="Shreenath Jewelers website screenshot" class="project-img" loading="lazy">
         </div>
-        <div class="p-6">
-          <span class="text-xs font-semibold tracking-widest uppercase text-accent">Retail · Luxury</span>
-          <h3 class="font-serif text-2xl text-primary mt-2">Shreenath Jewelers</h3>
-          <p class="text-muted mt-3 leading-relaxed">Premium site for a third-generation Indian jeweler. Built for bridal season traffic.</p>
-          <a href="https://jewelleryshop-website.rounab.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-5 font-semibold text-accent hover:text-accent-hover transition">
-            View Live Demo →
-          </a>
+        <div class="p-6 flex flex-col flex-1">
+          <span class="project-tag mb-2">Retail · Luxury</span>
+          <h3 class="font-serif text-2xl mb-2 text-primary">Shreenath Jewelers</h3>
+          <p class="text-body mb-5 flex-1">Premium site for a third-generation Indian jeweler. Built for bridal season traffic.</p>
+          <a href="https://jewelleryshop-website.rounab.com" target="_blank" rel="noopener" class="project-link">View Live Demo →</a>
         </div>
-      </div>
+      </article>
       <!-- PROJECT CARD END -->
 
-      <!-- Coming soon placeholder -->
-      <div class="rounded-2xl border-2 border-dashed flex items-center justify-center p-10 fade-up text-center" style="border-color: var(--border); min-height: 300px; transition-delay: 300ms;">
-        <div>
-          <div class="text-4xl mb-3">✨</div>
-          <p class="font-serif text-xl text-primary">Coming Soon</p>
-          <p class="text-sm text-muted mt-2 leading-relaxed">More projects launching soon — Indian restaurants, med spas, and more.</p>
+      <!-- PROJECT CARD START -->
+      <article class="project-card fade-up">
+        <div class="project-img-wrap">
+          <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=800" alt="Radiance Med Spa website screenshot" class="project-img" loading="lazy">
         </div>
-      </div>
+        <div class="p-6 flex flex-col flex-1">
+          <span class="project-tag mb-2">Med Spa · Wellness</span>
+          <h3 class="font-serif text-2xl mb-2 text-primary">Radiance Med Spa</h3>
+          <p class="text-body mb-5 flex-1">Luxury med spa site with online booking, treatment galleries, and a premium feel that matches the brand.</p>
+          <a href="medspa-demo.html" target="_blank" rel="noopener" class="project-link">View Live Demo →</a>
+        </div>
+      </article>
+      <!-- PROJECT CARD END -->
+
+      <!-- PROJECT CARD START -->
+      <article class="project-card fade-up">
+        <div class="project-img-wrap">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" alt="Saffron Kitchen & Bar website screenshot" class="project-img" loading="lazy">
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <span class="project-tag mb-2">Restaurant · Dining</span>
+          <h3 class="font-serif text-2xl mb-2 text-primary">Saffron Kitchen & Bar</h3>
+          <p class="text-body mb-5 flex-1">Modern restaurant site with menu showcase, reservation system, and Google Maps integration.</p>
+          <a href="restaurant-demo.html" target="_blank" rel="noopener" class="project-link">View Live Demo →</a>
+        </div>
+      </article>
+      <!-- PROJECT CARD END -->
 
     </div>
+    <!-- =========================================== -->
+    <!-- END PROJECT CARDS                             -->
+    <!-- =========================================== -->
   </div>
 </section>
 
 <!-- ============================================= -->
 <!-- SECTION: WHO I BUILD FOR                       -->
 <!-- ============================================= -->
-<section class="py-20 lg:py-28 bg-alt">
-  <div class="container-c">
-    <div class="text-center max-w-2xl mx-auto mb-16 fade-up">
-      <h2 class="h-section">Built for Indian-Owned Businesses in the USA</h2>
-      <p class="h-sub mt-4">I focus on niches where I can deliver real value — not every business I meet.</p>
+<section class="py-20 md:py-28 bg-muted-bg">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-8">
+    <div class="max-w-3xl mx-auto text-center mb-14 md:mb-16">
+      <p class="eyebrow mb-4 fade-up">Niches I serve</p>
+      <h2 class="display-lg mb-5 fade-up">From India Serving USA</h2>
+      <p class="text-lg text-muted fade-up">I focus on niches where I can deliver real value — not every business I meet.</p>
     </div>
-    <div class="grid grid-cols-2 lg:grid-cols-3 gap-5">
-      <div class="niche-card bg-white rounded-2xl p-6 fade-up">
-        <div class="text-3xl mb-3">🏨</div>
-        <h3 class="font-semibold text-primary">Motels & Hotels</h3>
-        <p class="text-sm text-muted mt-1.5 leading-relaxed">Direct bookings that bypass OTA commissions.</p>
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+      <div class="niche-card fade-up">
+        <span class="niche-emoji">🏨</span>
+        <h3 class="font-semibold text-primary mb-1">Motels & Hotels</h3>
+        <p class="text-sm text-muted">Direct bookings, no OTA commissions.</p>
       </div>
-      <div class="niche-card bg-white rounded-2xl p-6 fade-up" style="transition-delay: 80ms;">
-        <div class="text-3xl mb-3">💎</div>
-        <h3 class="font-semibold text-primary">Jewelry Stores</h3>
-        <p class="text-sm text-muted mt-1.5 leading-relaxed">Premium galleries that win bridal-season buyers.</p>
+      <div class="niche-card fade-up">
+        <span class="niche-emoji">💎</span>
+        <h3 class="font-semibold text-primary mb-1">Jewelry Stores</h3>
+        <p class="text-sm text-muted">Premium feel for bridal and luxury.</p>
       </div>
-      <div class="niche-card bg-white rounded-2xl p-6 fade-up" style="transition-delay: 160ms;">
-        <div class="text-3xl mb-3">🍛</div>
-        <h3 class="font-semibold text-primary">Restaurants</h3>
-        <p class="text-sm text-muted mt-1.5 leading-relaxed">Menus, online orders, and reviews that convert.</p>
+      <div class="niche-card fade-up">
+        <span class="niche-emoji">🍛</span>
+        <h3 class="font-semibold text-primary mb-1">Restaurants</h3>
+        <p class="text-sm text-muted">Menus, orders, and Google visibility.</p>
       </div>
-      <div class="niche-card bg-white rounded-2xl p-6 fade-up" style="transition-delay: 240ms;">
-        <div class="text-3xl mb-3">🏥</div>
-        <h3 class="font-semibold text-primary">Dental & Medical Clinics</h3>
-        <p class="text-sm text-muted mt-1.5 leading-relaxed">Trust-first sites that book new patients.</p>
+      <div class="niche-card fade-up">
+        <span class="niche-emoji">🏥</span>
+        <h3 class="font-semibold text-primary mb-1">Dental & Medical Clinics</h3>
+        <p class="text-sm text-muted">Appointments and patient trust.</p>
       </div>
-      <div class="niche-card bg-white rounded-2xl p-6 fade-up" style="transition-delay: 320ms;">
-        <div class="text-3xl mb-3">💅</div>
-        <h3 class="font-semibold text-primary">Med Spas & Salons</h3>
-        <p class="text-sm text-muted mt-1.5 leading-relaxed">Elegant booking experiences that sell services.</p>
+      <div class="niche-card fade-up">
+        <span class="niche-emoji">💅</span>
+        <h3 class="font-semibold text-primary mb-1">Med Spas & Salons</h3>
+        <p class="text-sm text-muted">Bookings that match your brand.</p>
       </div>
-      <div class="niche-card bg-white rounded-2xl p-6 fade-up" style="transition-delay: 400ms;">
-        <div class="text-3xl mb-3">🛒</div>
-        <h3 class="font-semibold text-primary">Grocery & Retail</h3>
-        <p class="text-sm text-muted mt-1.5 leading-relaxed">Local storefronts with real foot-traffic pull.</p>
+      <div class="niche-card fade-up">
+        <span class="niche-emoji">🛒</span>
+        <h3 class="font-semibold text-primary mb-1">Grocery & Retail</h3>
+        <p class="text-sm text-muted">Local SEO and simple catalogs.</p>
       </div>
     </div>
   </div>
@@ -435,63 +644,84 @@
 <!-- ============================================= -->
 <!-- SECTION: PRICING                               -->
 <!-- ============================================= -->
-<section id="pricing" class="py-20 lg:py-28">
-  <div class="container-c">
-    <div class="text-center max-w-2xl mx-auto mb-14 fade-up">
-      <h2 class="h-section">Simple, Honest Pricing</h2>
-      <p class="h-sub mt-4">One-time payment. No hidden fees. No retainers. Always priced lower than agencies.</p>
+<section id="pricing" class="py-20 md:py-28">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-8">
+    <div class="max-w-3xl mx-auto text-center mb-14 md:mb-16">
+      <p class="eyebrow mb-4 fade-up">Pricing</p>
+      <h2 class="display-lg mb-5 fade-up">Simple, Honest Pricing</h2>
+      <p class="text-lg text-muted fade-up">One-time payment. No hidden fees. No retainers.</p>
     </div>
-    <div class="max-w-xl mx-auto">
-      <div class="pricing-card bg-white rounded-2xl p-8 sm:p-10 border border-soft fade-up" style="border-color: var(--border);">
-        <div class="flex justify-center mb-6">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase" style="background: rgba(5,150,105,0.1); color: var(--accent); border: 1px solid rgba(5,150,105,0.2);">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-            Pay Only If You Approve
-          </span>
+    <div class="pricing-card fade-up" id="pricingCard">
+      <div class="pricing-badge">PAY ONLY IF YOU APPROVE</div>
+      <div class="text-center mb-8">
+        <div class="flex items-baseline justify-center gap-1 mb-2">
+          <span class="text-2xl text-muted font-medium">$</span>
+          <span class="font-serif text-primary" style="font-size: clamp(3.5rem, 10vw, 5.5rem); line-height: 1;">500</span>
         </div>
-        <div class="text-center">
-          <div class="h-display" style="font-size: clamp(3rem, 7vw, 4.5rem);">Starting at $800</div>
-          <p class="text-muted mt-2">for a complete 2–3 page website</p>
-        </div>
-        <div class="mt-8 space-y-3.5">
-          <div class="flex gap-3 items-start"><span class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span><span class="text-body" style="color: var(--body);">Custom-designed website (not a template)</span></div>
-          <div class="flex gap-3 items-start"><span class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span><span style="color: var(--body);">Home + About + Services (up to 3 pages)</span></div>
-          <div class="flex gap-3 items-start"><span class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span><span style="color: var(--body);">Mobile-first, loads in 2 seconds</span></div>
-          <div class="flex gap-3 items-start"><span class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span><span style="color: var(--body);">Contact forms + WhatsApp integration</span></div>
-          <div class="flex gap-3 items-start"><span class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span><span style="color: var(--body);">SEO basics (Google search ready)</span></div>
-          <div class="flex gap-3 items-start"><span class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span><span style="color: var(--body);">Delivered in 5–7 days</span></div>
-          <div class="flex gap-3 items-start"><span class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span><span style="color: var(--body);">Free revisions until you love it</span></div>
-          <div class="flex gap-3 items-start"><span class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span><span style="color: var(--body);">You own everything</span></div>
-        </div>
-        <a href="https://wa.me/918282036966" target="_blank" rel="noopener" class="btn btn-accent bg-accent-hover w-full mt-8" style="padding: 1.1rem 1.6rem; font-size: 1rem;">Start a Conversation on WhatsApp →</a>
+        <p class="text-muted">starting from · one-time</p>
       </div>
-      <p class="text-center text-sm text-muted mt-6 max-w-xl mx-auto leading-relaxed fade-up">
-        Need more pages, e-commerce, booking systems, or multi-language? I'll scope and quote it directly over WhatsApp — always priced lower than what agencies quote you. Message me.
-      </p>
+      <div class="mb-8">
+        <div class="check-row">
+          <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <span class="text-body">Custom-designed website (not a template)</span>
+        </div>
+        <div class="check-row">
+          <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <span class="text-body">Mobile-first, loads in 2 seconds</span>
+        </div>
+        <div class="check-row">
+          <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <span class="text-body">Up to 6 pages (Home, About, Services, etc.)</span>
+        </div>
+        <div class="check-row">
+          <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <span class="text-body">Contact forms + WhatsApp integration</span>
+        </div>
+
+        <div class="check-row">
+          <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <span class="text-body">Delivered in 5–7 days</span>
+        </div>
+        <div class="check-row">
+          <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <span class="text-body">Free revisions until you love it</span>
+        </div>
+        <div class="check-row">
+          <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <span class="text-body">You own everything</span>
+        </div>
+      </div>
+      <!-- REPLACE WhatsApp number -->
+      <a href="https://wa.me/918282036966" target="_blank" rel="noopener" class="btn btn-accent w-full">Start a Conversation on WhatsApp</a>
     </div>
+    <p class="text-center text-sm text-muted mt-8 max-w-xl mx-auto fade-up">
+      Need something custom — e-commerce, multi-language, or booking systems? Message me and I'll quote you directly.
+    </p>
   </div>
 </section>
 
 <!-- ============================================= -->
-<!-- SECTION: ABOUT / STORY                         -->
+<!-- SECTION: ABOUT                                 -->
 <!-- ============================================= -->
-<section class="py-20 lg:py-28 bg-alt">
-  <div class="container-c">
-    <div class="grid lg:grid-cols-5 gap-10 lg:gap-16 items-center max-w-5xl mx-auto">
+<section id="about" class="py-20 md:py-28 bg-muted-bg">
+  <div class="max-w-[1100px] mx-auto px-5 md:px-8">
+    <div class="grid lg:grid-cols-5 gap-10 lg:gap-16 items-center">
       <div class="lg:col-span-2 fade-up">
-        <div class="relative max-w-sm mx-auto">
-          <div class="absolute inset-0 bg-accent rounded-2xl transform rotate-3" style="opacity: 0.15;"></div>
-          <img src="https://i.imgur.com/O0dYkiG.png" alt="Rounab, Web Designer at Lead Revive" class="relative rounded-2xl w-full aspect-square object-cover card-shadow-lg">
+        <div class="relative w-full max-w-sm mx-auto" style="aspect-ratio: 1;">
+          <!-- REPLACE: real headshot URL here -->
+          <img src="https://i.imgur.com/O0dYkiG.png" alt="Rounab portrait" class="w-full h-full object-cover rounded-3xl shadow-xl">
         </div>
       </div>
-      <div class="lg:col-span-3 fade-up" style="transition-delay: 150ms;">
-        <span class="text-xs font-bold tracking-widest uppercase text-accent">About Rounab</span>
-        <h2 class="h-section mt-3">A developer, not a salesman</h2>
-        <div class="mt-6 space-y-5 text-lg leading-relaxed" style="color: var(--body);">
-          <p>Hi — I'm Rounab. I build websites from India for Indian-owned businesses across America. I started Lead Revive because I saw how many family-run businesses — motels, restaurants, jewelers — were losing customers to bad websites or none at all.</p>
-          <p>My promise is simple: I build the website first, for free. You only pay if it's better than what you have today. If you don't love it, you owe me nothing. That's the whole deal.</p>
-        </div>
-        <p class="mt-6 font-serif text-2xl text-primary">— Rounab</p>
+      <div class="lg:col-span-3 fade-up">
+        <p class="eyebrow mb-4">About Rounab</p>
+        <h2 class="display-lg mb-6">A developer, not a salesman</h2>
+        <p class="text-lg text-body leading-relaxed mb-5">
+          Hi — I'm Rounab. I started Lead Revive because I saw how many family-run businesses — motels, restaurants, jewelers — were losing customers to bad websites or none at all. I've always believed a great website shouldn't be a luxury — it should be a given.
+        </p>
+        <p class="text-lg text-body leading-relaxed mb-6">
+          My promise is simple: I build the website first, for free. You only pay if it's better than what you have today. If you don't love it, you owe me nothing. That's the whole deal.
+        </p>
+        <p class="font-serif italic text-xl text-primary">— Rounab</p>
       </div>
     </div>
   </div>
@@ -500,59 +730,68 @@
 <!-- ============================================= -->
 <!-- SECTION: FAQ                                   -->
 <!-- ============================================= -->
-<section id="faq" class="py-20 lg:py-28">
-  <div class="container-c">
-    <div class="text-center max-w-2xl mx-auto mb-14 fade-up">
-      <h2 class="h-section">Questions You Might Have</h2>
+<section id="faq" class="py-20 md:py-28">
+  <div class="max-w-[820px] mx-auto px-5 md:px-8">
+    <div class="text-center mb-14">
+      <p class="eyebrow mb-4 fade-up">FAQ</p>
+      <h2 class="display-lg fade-up">Questions You Might Have</h2>
     </div>
-    <div class="max-w-3xl mx-auto fade-up">
+    <div class="fade-up">
       <div class="faq-item">
-        <div class="faq-q"><span class="font-semibold text-primary text-lg">Why do you work for free until I approve?</span>
-          <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </div>
-        <div class="faq-a text-muted leading-relaxed">Because trust is earned, not claimed. I'd rather show you real work than promise it. If my site doesn't beat what you have, you shouldn't pay me. Simple as that.</div>
+        <button class="faq-btn" aria-expanded="false">
+          <span>Why do you work for free until I approve?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer"><p>Because trust is earned, not claimed. I'd rather show you real work than promise it. If my site doesn't beat what you have, you shouldn't pay me. Simple as that.</p></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q"><span class="font-semibold text-primary text-lg">How is it that cheap? What's the catch?</span>
-          <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </div>
-        <div class="faq-a text-muted leading-relaxed">No catch. I'm based in India, so my costs are lower than a US agency's. That means I can charge $800 where they charge $3000, and still make a living. The quality is the same — you can see for yourself in my demos.</div>
+        <button class="faq-btn" aria-expanded="false">
+          <span>How is it that cheap? What's the catch?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer"><p>No catch. I'm based in India, so my costs are lower than a US agency's. That means I can charge $500 where they charge $3000, and still make a living. The quality is the same — you can see for yourself in my demos.</p></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q"><span class="font-semibold text-primary text-lg">What if I need more than 3 pages?</span>
-          <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </div>
-        <div class="faq-a text-muted leading-relaxed">No problem. My starting price of $800 covers up to 3 pages. For bigger projects — more pages, online ordering, booking systems, or multi-language sites — I scope it over WhatsApp and quote you a flat price. Always less than what a US agency would charge.</div>
+        <button class="faq-btn" aria-expanded="false">
+          <span>Do you speak English well?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer"><p>Yes. I communicate primarily through WhatsApp messages, so everything is clear and in writing. For calls, I'm conversational — but most of my clients prefer WhatsApp anyway.</p></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q"><span class="font-semibold text-primary text-lg">Do you speak English well?</span>
-          <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </div>
-        <div class="faq-a text-muted leading-relaxed">Yes. I communicate primarily through WhatsApp messages, so everything is clear and in writing. For calls, I'm conversational — but most of my clients prefer WhatsApp anyway.</div>
+        <button class="faq-btn" aria-expanded="false">
+          <span>How long does it take?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer"><p>5 to 7 days from the moment we finish our first chat. I send you a preview on day 3 or 4 so you can give feedback before I finish.</p></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q"><span class="font-semibold text-primary text-lg">How long does it take?</span>
-          <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </div>
-        <div class="faq-a text-muted leading-relaxed">5 to 7 days from the moment we finish our first chat. I send you a preview on day 3 or 4 so you can give feedback before I finish.</div>
+        <button class="faq-btn" aria-expanded="false">
+          <span>What do you need from me to get started?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer"><p>Almost nothing. A 15-minute WhatsApp chat about your business. Any photos you want included. Your logo if you have one (I can help make one if not). That's it.</p></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q"><span class="font-semibold text-primary text-lg">What do you need from me to get started?</span>
-          <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </div>
-        <div class="faq-a text-muted leading-relaxed">Almost nothing. A 15-minute WhatsApp chat about your business. Any photos you want included. Your logo if you have one (I can help make one if not). That's it.</div>
+        <button class="faq-btn" aria-expanded="false">
+          <span>What happens after you deliver?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer"><p>You own everything. I hand over all files and login details. If you want me to host and maintain it, I offer that for $15/month. If not, no problem.</p></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q"><span class="font-semibold text-primary text-lg">What happens after you deliver?</span>
-          <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </div>
-        <div class="faq-a text-muted leading-relaxed">You own everything. I hand over all files and login details. If you want me to host and maintain it, I offer that for a small monthly fee. If not, no problem.</div>
+        <button class="faq-btn" aria-expanded="false">
+          <span>Can I see examples of your work?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer"><p>Scroll up — my live demo websites are in the Work section. Tap any of them to explore the real, live sites.</p></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q"><span class="font-semibold text-primary text-lg">Why only Indian-owned businesses?</span>
-          <svg class="faq-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </div>
-        <div class="faq-a text-muted leading-relaxed">Because I understand the culture, the values, and what your customers expect. I can talk to you like family. And I can design for audiences that most American agencies miss.</div>
+        <button class="faq-btn" aria-expanded="false">
+          <span>Why only Indian-owned businesses?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer"><p>Because I understand the culture, the values, and what your customers expect. I can talk to you like family. And I can design for audiences that most American agencies miss.</p></div>
       </div>
     </div>
   </div>
@@ -561,17 +800,16 @@
 <!-- ============================================= -->
 <!-- SECTION: FINAL CTA                             -->
 <!-- ============================================= -->
-<section id="contact" class="py-24 lg:py-32 bg-primary-dark text-white">
-  <div class="container-c text-center max-w-3xl mx-auto">
-    <span class="text-xs font-bold tracking-widest uppercase text-accent fade-up">Let's Build Something</span>
-    <h2 class="font-serif text-white mt-4 fade-up" style="font-size: clamp(2.25rem, 5vw, 3.75rem); line-height: 1.1; letter-spacing: -0.01em;">
-      Your next customer is already searching online.
-    </h2>
-    <p class="mt-5 text-lg fade-up" style="color: rgba(255,255,255,0.7);">
-      Let's make sure they find a website worth their trust.
-    </p>
-    <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center fade-up">
-      <a href="https://wa.me/918282036966" target="_blank" rel="noopener" class="btn btn-accent bg-accent-hover">Message on WhatsApp →</a>
+<section id="contact" class="py-20 md:py-28 bg-primary relative overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 600px 400px at 50% 0%, rgba(5,150,105,0.15) 0%, transparent 70%);"></div>
+  <div class="max-w-[900px] mx-auto px-5 md:px-8 text-center relative fade-up">
+    <p class="eyebrow mb-5" style="color: #34D399;">Let's build something</p>
+    <h2 class="display-lg mb-5" style="color: #fff;">Your next customer is already searching online.</h2>
+    <p class="text-lg mb-10" style="color: #CBD5E1;">Let's make sure they find a website worth their trust.</p>
+    <div class="hero-ctas flex flex-wrap gap-3 justify-center">
+      <!-- REPLACE WhatsApp number -->
+      <a href="https://wa.me/918282036966" target="_blank" rel="noopener" class="btn btn-accent">Message on WhatsApp →</a>
+      <!-- REPLACE: real email address -->
       <a href="mailto:rounab@rounab.com" class="btn btn-outline-white">Email me</a>
     </div>
   </div>
@@ -580,104 +818,112 @@
 <!-- ============================================= -->
 <!-- SECTION: FOOTER                                -->
 <!-- ============================================= -->
-<footer class="py-14 border-t" style="border-color: var(--border);">
-  <div class="container-c">
-    <div class="grid md:grid-cols-3 gap-10">
+<footer class="py-14 bg-primary border-t" style="border-color: rgba(255,255,255,0.08);">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-8">
+    <div class="grid md:grid-cols-3 gap-8 mb-10">
       <div>
-        <div class="flex items-baseline gap-2">
-          <span class="font-bold text-lg text-primary">Rounab</span>
-          <span class="text-sm text-muted">· Lead Revive</span>
+        <div class="flex items-baseline gap-2 mb-3">
+          <span class="font-bold text-lg" style="color: #fff;">Rounab</span>
+          <span class="text-sm" style="color: #94A3B8;">· Lead Revive</span>
         </div>
-        <p class="mt-3 text-sm text-muted leading-relaxed max-w-xs">Websites that bring customers. Pay only if you love them.</p>
+        <p class="text-sm" style="color: #94A3B8; line-height: 1.6;">Websites that bring customers. Pay only if you love them.</p>
       </div>
       <div>
-        <h4 class="text-sm font-bold uppercase tracking-wider text-primary mb-4">Explore</h4>
-        <ul class="space-y-2.5 text-sm">
-          <li><a href="#work" class="text-muted hover:text-accent">Work</a></li>
-          <li><a href="#process" class="text-muted hover:text-accent">Process</a></li>
-          <li><a href="#pricing" class="text-muted hover:text-accent">Pricing</a></li>
-          <li><a href="#faq" class="text-muted hover:text-accent">FAQ</a></li>
-        </ul>
+        <h4 class="eyebrow mb-4" style="color: #34D399;">Explore</h4>
+        <div class="flex flex-col gap-2">
+          <a href="#work" class="text-sm hover:text-white transition" style="color: #CBD5E1;">Work</a>
+          <a href="#process" class="text-sm hover:text-white transition" style="color: #CBD5E1;">Process</a>
+          <a href="#pricing" class="text-sm hover:text-white transition" style="color: #CBD5E1;">Pricing</a>
+          <a href="#faq" class="text-sm hover:text-white transition" style="color: #CBD5E1;">FAQ</a>
+        </div>
       </div>
       <div>
-        <h4 class="text-sm font-bold uppercase tracking-wider text-primary mb-4">Connect</h4>
-        <ul class="space-y-2.5 text-sm">
-          <li><a href="https://wa.me/918282036966" target="_blank" rel="noopener" class="text-muted hover:text-accent">WhatsApp</a></li>
-          <li><a href="mailto:rounab@rounab.com" class="text-muted hover:text-accent">rounab@rounab.com</a></li>
-          <li class="text-muted">Based in India 🇮🇳</li>
-        </ul>
+        <h4 class="eyebrow mb-4" style="color: #34D399;">Connect</h4>
+        <div class="flex flex-col gap-2">
+          <!-- REPLACE WhatsApp number -->
+          <a href="https://wa.me/918282036966" target="_blank" rel="noopener" class="text-sm hover:text-white transition" style="color: #CBD5E1;">WhatsApp: +91 82820 36966</a>
+          <!-- REPLACE: real email address -->
+          <a href="mailto:rounab@rounab.com" class="text-sm hover:text-white transition" style="color: #CBD5E1;">rounab@rounab.com</a>
+          <span class="text-sm" style="color: #CBD5E1;">Based in India 🇮🇳</span>
+        </div>
       </div>
     </div>
-    <div class="mt-12 pt-6 border-t text-xs text-muted text-center" style="border-color: var(--border);">
+    <div class="pt-6 border-t text-center text-xs" style="border-color: rgba(255,255,255,0.08); color: #64748B;">
       © 2025 Rounab · Designed and coded by me, from India
     </div>
   </div>
 </footer>
 
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/918282036966" target="_blank" rel="noopener" class="fab" aria-label="Message on WhatsApp">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+<!-- Floating WhatsApp -->
+<!-- REPLACE WhatsApp number -->
+<a href="https://wa.me/918282036966" target="_blank" rel="noopener" class="float-wa" aria-label="Chat on WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
 <script>
-  // Nav scroll transition
-  const nav = document.querySelector('.nav');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) nav.classList.add('scrolled');
-    else nav.classList.remove('scrolled');
+// Nav scroll
+const navWrap = document.getElementById('navWrap');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 100) navWrap.classList.add('scrolled');
+  else navWrap.classList.remove('scrolled');
+}, { passive: true });
+
+// Mobile menu
+const menuBtn = document.getElementById('menuBtn');
+const menuClose = document.getElementById('menuClose');
+const mobileMenu = document.getElementById('mobileMenu');
+const backdrop = document.getElementById('menuBackdrop');
+const openMenu = () => { mobileMenu.classList.add('open'); backdrop.classList.add('open'); document.body.style.overflow = 'hidden'; };
+const closeMenu = () => { mobileMenu.classList.remove('open'); backdrop.classList.remove('open'); document.body.style.overflow = ''; };
+menuBtn.addEventListener('click', openMenu);
+menuClose.addEventListener('click', closeMenu);
+backdrop.addEventListener('click', closeMenu);
+document.querySelectorAll('.m-link').forEach(l => l.addEventListener('click', closeMenu));
+
+// Fade up Intersection Observer
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      const siblings = Array.from(entry.target.parentElement.children).filter(el => el.classList.contains('fade-up'));
+      const idx = siblings.indexOf(entry.target);
+      setTimeout(() => entry.target.classList.add('in'), Math.max(0, idx) * 100);
+      fadeObserver.unobserve(entry.target);
+    }
   });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
 
-  // Mobile menu
-  const menuBtn = document.getElementById('menuBtn');
-  const closeBtn = document.getElementById('closeBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const mobileOverlay = document.getElementById('mobileOverlay');
-  const mobileLinks = document.querySelectorAll('.mobile-link');
-
-  const openMenu = () => { mobileMenu.classList.add('open'); mobileOverlay.classList.add('open'); document.body.style.overflow = 'hidden'; };
-  const closeMenu = () => { mobileMenu.classList.remove('open'); mobileOverlay.classList.remove('open'); document.body.style.overflow = ''; };
-
-  menuBtn.addEventListener('click', openMenu);
-  closeBtn.addEventListener('click', closeMenu);
-  mobileOverlay.addEventListener('click', closeMenu);
-  mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
-
-  // Intersection Observer for fade-up
-  const fadeEls = document.querySelectorAll('.fade-up');
-  const io = new IntersectionObserver((entries) => {
+// Pricing card glow
+const pricingCard = document.getElementById('pricingCard');
+if (pricingCard) {
+  const glowObserver = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        if (e.target.classList.contains('pricing-card')) e.target.classList.add('visible');
-        io.unobserve(e.target);
+        pricingCard.classList.add('glow');
+        glowObserver.unobserve(pricingCard);
       }
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
-  fadeEls.forEach(el => io.observe(el));
+  }, { threshold: 0.4 });
+  glowObserver.observe(pricingCard);
+}
 
-  // Pricing card observer for glow
-  const pricingCard = document.querySelector('.pricing-card');
-  if (pricingCard) {
-    const pio = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); pio.unobserve(e.target); } });
-    }, { threshold: 0.3 });
-    pio.observe(pricingCard);
-  }
-
-  // FAQ accordion
-  document.querySelectorAll('.faq-q').forEach(q => {
-    q.addEventListener('click', () => {
-      const item = q.parentElement;
-      item.classList.toggle('open');
-    });
+// FAQ accordion
+document.querySelectorAll('.faq-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const answer = item.querySelector('.faq-answer');
+    const isOpen = item.classList.contains('open');
+    if (isOpen) {
+      answer.style.maxHeight = '0px';
+      item.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    } else {
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      btn.setAttribute('aria-expanded', 'true');
+    }
   });
-
-  // Hero fade-up on load
-  window.addEventListener('load', () => {
-    document.querySelectorAll('.hero-bg .fade-up').forEach(el => {
-      setTimeout(() => el.classList.add('visible'), 50);
-    });
-  });
+});
 </script>
 </body>
 </html>
