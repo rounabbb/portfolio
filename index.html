@@ -1,929 +1,1749 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rounab · Lead Revive — From India Serving USA</title>
-<meta name="description" content="I build custom websites for businesses across the United States. You only pay if you love what I build. From India, serving the USA.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23059669'/%3E%3Ctext x='50' y='72' text-anchor='middle' font-family='Inter,sans-serif' font-size='70' font-weight='800' fill='white'%3ER%3C/text%3E%3C/svg%3E">
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root {
-  --primary: #0F172A;
-  --accent: #059669;
-  --accent-hover: #047857;
-  --soft-white: #FFFFFF;
-  --muted-bg: #F8FAFC;
-  --border: #E2E8F0;
-  --body: #334155;
-  --muted: #64748B;
-}
-* { -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Inter', sans-serif;
-  color: var(--body);
-  background: var(--soft-white);
-  overflow-x: hidden;
-  line-height: 1.6;
-}
-.font-serif { font-family: 'Instrument Serif', serif; font-weight: 400; letter-spacing: -0.01em; }
-.font-sans { font-family: 'Inter', sans-serif; }
-.text-primary { color: var(--primary); }
-.text-accent { color: var(--accent); }
-.text-muted { color: var(--muted); }
-.text-body { color: var(--body); }
-.bg-accent { background: var(--accent); }
-.bg-muted-bg { background: var(--muted-bg); }
-.bg-primary { background: var(--primary); }
-.border-soft { border-color: var(--border); }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rounab · Lead Revive — Websites for Indian Small Businesses</title>
+  <meta name="description" content="Agency-grade websites for Indian small businesses, starting at ₹15,000. Pay only after you approve. Built by one developer who gives a damn.">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta property="og:title" content="Rounab · Lead Revive — Websites for Indian Small Businesses">
+  <meta property="og:description" content="Agency-grade websites for Indian small businesses, starting at ₹15,000. Pay only after you approve.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://portfolio.rounab.com">
+  <meta property="og:image" content="https://i.imgur.com/O0dYkiG.png">
+  <meta property="og:image:alt" content="Rounab, founder of Lead Revive">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230A0A0A'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='62' font-weight='800' fill='%23FF6B35'%3ER%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0A0A0A;
+      --text-dark: #0A0A0A;
+      --text-light: #FAFAFA;
+      --muted-dark: #5F6368;
+      --muted-light: rgba(250,250,250,0.68);
+      --accent: #FF6B35;
+      --card-dark: #1A1A1A;
+      --border-light: rgba(0,0,0,0.08);
+      --border-dark: rgba(255,255,255,0.1);
+      --success: #10B981;
+      --whatsapp: #25D366;
+      --whatsapp-dark: #1EBE5C;
+      --container: 1200px;
+      --shadow-card: 0 1px 3px rgba(0,0,0,0.04), 0 4px 24px rgba(0,0,0,0.04);
+      --shadow-hover: 0 10px 30px rgba(0,0,0,0.08), 0 24px 60px rgba(0,0,0,0.06);
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+    }
 
-/* Typography */
-h1, h2, h3 { color: var(--primary); }
-.display-xl { font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(2.5rem, 6.5vw, 4.75rem); line-height: 1.05; letter-spacing: -0.02em; }
-.display-lg { font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.015em; }
-.display-md { font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.15; }
-.eyebrow { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
+    * {
+      box-sizing: border-box;
+    }
 
-/* Buttons */
-.btn {
-  display: inline-flex; align-items: center; justify-content: center;
-  gap: 0.5rem;
-  padding: 0.95rem 1.6rem;
-  min-height: 48px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  border-radius: 10px;
-  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-  border: 1.5px solid transparent;
-  white-space: nowrap;
-}
-.btn-primary { background: var(--primary); color: #fff; border-color: var(--primary); }
-.btn-primary:hover { background: #1e293b; border-color: #1e293b; transform: translateY(-2px) scale(1.02); box-shadow: 0 10px 24px rgba(15, 23, 42, 0.18); }
-.btn-accent { background: var(--accent); color: #fff; border-color: var(--accent); }
-.btn-accent:hover { background: var(--accent-hover); border-color: var(--accent-hover); transform: translateY(-2px) scale(1.02); box-shadow: 0 10px 24px rgba(5, 150, 105, 0.3); }
-.btn-outline { background: transparent; color: var(--primary); border-color: var(--border); }
-.btn-outline:hover { border-color: var(--primary); transform: translateY(-2px); }
-.btn-outline-white { background: transparent; color: #fff; border-color: rgba(255,255,255,0.3); }
-.btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+    html {
+      scroll-behavior: smooth;
+      text-size-adjust: 100%;
+    }
 
-/* Nav */
-.nav-wrap {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
-  transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
-  background: transparent;
-}
-.nav-wrap.scrolled { background: rgba(255,255,255,0.92); backdrop-filter: saturate(180%) blur(14px); box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06); }
-.nav-link {
-  font-size: 0.92rem;
-  font-weight: 500;
-  color: var(--body);
-  position: relative;
-  padding: 8px 2px;
-  transition: color 300ms ease;
-}
-.nav-link:hover { color: var(--primary); }
-.nav-link::after {
-  content: ''; position: absolute;
-  left: 0; bottom: 0;
-  width: 0; height: 2px;
-  background: var(--accent);
-  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.nav-link:hover::after { width: 100%; }
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #FFFFFF;
+      color: var(--text-dark);
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
 
-/* Hero */
-.hero { min-height: 100vh; display: flex; align-items: center; position: relative; padding-top: 80px; padding-bottom: 60px; }
-.hero-gradient {
-  position: absolute; inset: 0;
-  background: 
-    radial-gradient(ellipse 800px 600px at 80% 20%, rgba(5,150,105,0.08) 0%, transparent 60%),
-    radial-gradient(ellipse 600px 400px at 10% 80%, rgba(5,150,105,0.05) 0%, transparent 60%),
-    linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
-  pointer-events: none;
-}
-.available-badge {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 6px 14px;
-  background: rgba(5, 150, 105, 0.08);
-  color: var(--accent);
-  font-size: 0.82rem;
-  font-weight: 600;
-  border-radius: 100px;
-  border: 1px solid rgba(5, 150, 105, 0.15);
-}
-.available-dot {
-  width: 8px; height: 8px; border-radius: 50%;
-  background: var(--accent);
-  animation: pulseGreen 2s infinite;
-}
-@keyframes pulseGreen {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(5,150,105,0.5); }
-  50% { box-shadow: 0 0 0 8px rgba(5,150,105,0); }
-}
-.trust-row {
-  display: flex; flex-wrap: wrap;
-  gap: 1.25rem;
-  font-size: 0.88rem;
-  color: var(--muted);
-  font-weight: 500;
-}
+    img {
+      display: block;
+      max-width: 100%;
+    }
 
-/* Portrait */
-.portrait-wrap {
-  position: relative;
-  width: 100%;
-  max-width: 440px;
-  aspect-ratio: 1;
-  margin: 0 auto;
-}
-.portrait-blob {
-  position: absolute;
-  inset: -8%;
-  background: radial-gradient(circle, rgba(5,150,105,0.18) 0%, rgba(5,150,105,0.06) 50%, transparent 75%);
-  border-radius: 50%;
-  filter: blur(20px);
-  z-index: 0;
-  animation: blobFloat 8s ease-in-out infinite;
-}
-@keyframes blobFloat {
-  0%, 100% { transform: scale(1) translate(0,0); }
-  50% { transform: scale(1.05) translate(10px, -10px); }
-}
-.portrait-img {
-  position: relative; z-index: 1;
-  width: 100%; height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.15);
-  border: 6px solid #fff;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-/* Stagger hero */
-.stagger > * { opacity: 0; transform: translateY(24px); animation: staggerUp 800ms cubic-bezier(0.4, 0, 0.2, 1) forwards; }
-@keyframes staggerUp { to { opacity: 1; transform: translateY(0); } }
-.stagger > *:nth-child(1) { animation-delay: 0.1s; }
-.stagger > *:nth-child(2) { animation-delay: 0.25s; }
-.stagger > *:nth-child(3) { animation-delay: 0.4s; }
-.stagger > *:nth-child(4) { animation-delay: 0.55s; }
-.stagger > *:nth-child(5) { animation-delay: 0.7s; }
+    p,
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin: 0;
+    }
 
-/* Fade up on scroll */
-.fade-up { opacity: 0; transform: translateY(28px); transition: opacity 700ms cubic-bezier(0.4, 0, 0.2, 1), transform 700ms cubic-bezier(0.4, 0, 0.2, 1); }
-.fade-up.in { opacity: 1; transform: translateY(0); }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
 
-/* Process */
-.step-circle {
-  width: 52px; height: 52px;
-  border-radius: 50%;
-  background: var(--accent);
-  color: #fff;
-  display: flex; align-items: center; justify-content: center;
-  font-weight: 700;
-  font-size: 1.1rem;
-  flex-shrink: 0;
-  box-shadow: 0 8px 20px rgba(5, 150, 105, 0.25);
-}
-.process-card {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 1.75rem;
-  transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
-  height: 100%;
-}
-.process-card:hover {
-  border-color: rgba(5,150,105,0.3);
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
-}
+    .container {
+      width: min(100% - 48px, var(--container));
+      margin: 0 auto;
+    }
 
-/* Project card */
-.project-card {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  overflow: hidden;
-  transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex; flex-direction: column;
-  height: 100%;
-}
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.12);
-  border-color: rgba(5,150,105,0.2);
-}
-.project-img-wrap {
-  aspect-ratio: 16/10;
-  overflow: hidden;
-  background: var(--muted-bg);
-}
-.project-img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.project-card:hover .project-img { transform: scale(1.05); }
-.project-tag {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-.project-link {
-  color: var(--accent);
-  font-weight: 600;
-  font-size: 0.95rem;
-  display: inline-flex; align-items: center; gap: 6px;
-  transition: gap 300ms ease;
-}
-.project-card:hover .project-link { gap: 12px; }
+    .section {
+      padding: 120px 0;
+      background: #FFFFFF;
+    }
 
-/* Niche card */
-.niche-card {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 1.5rem;
-  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-  text-align: left;
-}
-.niche-card:hover {
-  border-color: var(--accent);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.07);
-}
-.niche-emoji { font-size: 2rem; display: block; margin-bottom: 0.75rem; }
+    .section-tight {
+      padding: 72px 0;
+      background: #FFFFFF;
+    }
 
-/* Pricing */
-.pricing-card {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  padding: clamp(2rem, 5vw, 3.5rem);
-  max-width: 560px;
-  margin: 0 auto;
-  position: relative;
-  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
-  transition: box-shadow 800ms ease;
-}
-.pricing-card.glow { box-shadow: 0 20px 80px rgba(5, 150, 105, 0.18), 0 0 0 1px rgba(5, 150, 105, 0.1); }
-.pricing-badge {
-  position: absolute;
-  top: -14px; left: 50%;
-  transform: translateX(-50%);
-  background: var(--accent);
-  color: #fff;
-  padding: 6px 16px;
-  border-radius: 100px;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-}
-.check-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 10px 0;
-}
-.check-icon {
-  width: 22px; height: 22px;
-  border-radius: 50%;
-  background: rgba(5,150,105,0.12);
-  color: var(--accent);
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
+    .section-header {
+      max-width: 780px;
+      margin-bottom: 52px;
+    }
 
-/* FAQ */
-.faq-item {
-  border-bottom: 1px solid var(--border);
-  transition: all 300ms ease;
-}
-.faq-btn {
-  width: 100%;
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 1.4rem 0;
-  text-align: left;
-  font-family: 'Instrument Serif', serif;
-  font-size: clamp(1.15rem, 2vw, 1.4rem);
-  color: var(--primary);
-  cursor: pointer;
-  gap: 1rem;
-  min-height: 48px;
-}
-.faq-chevron { transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1); flex-shrink: 0; color: var(--accent); }
-.faq-item.open .faq-chevron { transform: rotate(180deg); }
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 400ms cubic-bezier(0.4, 0, 0.2, 1), padding 400ms ease;
-}
-.faq-item.open .faq-answer { padding-bottom: 1.4rem; }
-.faq-answer p { color: var(--body); line-height: 1.7; }
+    .section-header.center {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
 
-/* Mobile menu */
-.mobile-menu-backdrop {
-  position: fixed; inset: 0;
-  background: rgba(15, 23, 42, 0.5);
-  opacity: 0; pointer-events: none;
-  transition: opacity 300ms ease;
-  z-index: 60;
-}
-.mobile-menu-backdrop.open { opacity: 1; pointer-events: auto; }
-.mobile-menu {
-  position: fixed; top: 0; right: 0; bottom: 0;
-  width: 85%; max-width: 360px;
-  background: #fff;
-  transform: translateX(100%);
-  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 61;
-  padding: 1.5rem;
-  display: flex; flex-direction: column;
-  overflow-y: auto;
-}
-.mobile-menu.open { transform: translateX(0); }
-.mobile-link {
-  display: block;
-  padding: 14px 0;
-  font-size: 1.15rem;
-  font-weight: 500;
-  color: var(--primary);
-  border-bottom: 1px solid var(--border);
-  min-height: 48px;
-}
+    h1,
+    h2,
+    h3 {
+      color: var(--text-dark);
+      letter-spacing: 0;
+      line-height: 0.98;
+    }
 
-/* Floating WhatsApp */
-.float-wa {
-  position: fixed;
-  bottom: 20px; right: 20px;
-  width: 56px; height: 56px;
-  border-radius: 50%;
-  background: #059669;
-  color: #fff;
-  display: none;
-  align-items: center; justify-content: center;
-  box-shadow: 0 10px 24px rgba(5, 150, 105, 0.4);
-  z-index: 40;
-  animation: floatPulse 3s infinite;
-}
-@keyframes floatPulse {
-  0%, 100% { box-shadow: 0 10px 24px rgba(5, 150, 105, 0.4); transform: scale(1); }
-  50% { box-shadow: 0 10px 32px rgba(5, 150, 105, 0.6); transform: scale(1.05); }
-}
-@media (max-width: 1023px) { .float-wa { display: flex; } }
+    h1 {
+      max-width: 760px;
+      font-size: 5.5rem;
+      font-weight: 800;
+    }
 
-/* Responsive tweaks */
-@media (max-width: 640px) {
-  .btn { width: 100%; }
-  .hero-ctas { flex-direction: column; width: 100%; }
-}
-</style>
+    h2 {
+      font-size: 4.3rem;
+      font-weight: 800;
+    }
+
+    h3 {
+      font-size: 1.22rem;
+      font-weight: 800;
+      line-height: 1.18;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .lead {
+      margin-top: 22px;
+      color: var(--muted-dark);
+      font-size: 1.22rem;
+      line-height: 1.7;
+    }
+
+    .muted {
+      color: var(--muted-dark);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 52px;
+      padding: 14px 24px;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      font-size: 0.96rem;
+      font-weight: 800;
+      line-height: 1;
+      white-space: nowrap;
+      transition: transform 200ms var(--ease), box-shadow 200ms var(--ease), background 200ms var(--ease), border-color 200ms var(--ease);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-dark {
+      background: var(--bg-dark);
+      color: #FFFFFF;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+    }
+
+    .btn-dark:hover {
+      box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+    }
+
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: #07160C;
+      box-shadow: 0 10px 24px rgba(37,211,102,0.24);
+    }
+
+    .btn-whatsapp:hover {
+      background: var(--whatsapp-dark);
+      box-shadow: 0 14px 30px rgba(37,211,102,0.32);
+    }
+
+    .btn-light {
+      background: #FFFFFF;
+      color: var(--text-dark);
+      border-color: rgba(255,255,255,0.22);
+    }
+
+    .btn-outline {
+      color: var(--text-light);
+      border-color: var(--border-dark);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      border-color: rgba(255,255,255,0.28);
+      background: rgba(255,255,255,0.06);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.24);
+    }
+
+    .btn-wide {
+      width: 100%;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: var(--bg-dark);
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      color: var(--text-light);
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      color: rgba(250,250,250,0.72);
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      transition: color 200ms var(--ease);
+    }
+
+    .nav-links a:hover {
+      color: var(--text-light);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-actions .btn {
+      min-height: 44px;
+      padding: 12px 16px;
+      font-size: 0.88rem;
+    }
+
+    .nav-toggle {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .menu-button {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--border-dark);
+      border-radius: 12px;
+      color: var(--text-light);
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .menu-button span,
+    .menu-button span::before,
+    .menu-button span::after {
+      display: block;
+      width: 18px;
+      height: 2px;
+      border-radius: 99px;
+      background: currentColor;
+      position: relative;
+      transition: transform 200ms var(--ease), top 200ms var(--ease), opacity 200ms var(--ease);
+    }
+
+    .menu-button span::before,
+    .menu-button span::after {
+      content: "";
+      position: absolute;
+      left: 0;
+    }
+
+    .menu-button span::before {
+      top: -6px;
+    }
+
+    .menu-button span::after {
+      top: 6px;
+    }
+
+    .hero {
+      background: var(--bg-dark);
+      color: var(--text-light);
+      padding: 86px 0 72px;
+      min-height: calc(100svh - 72px);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: linear-gradient(to bottom, black 0%, transparent 78%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.18fr) minmax(300px, 0.82fr);
+      align-items: center;
+      gap: 64px;
+      position: relative;
+    }
+
+    .hero h1 {
+      color: var(--text-light);
+    }
+
+    .hero-copy {
+      max-width: 820px;
+    }
+
+    .hero-copy .lead {
+      max-width: 760px;
+      color: var(--muted-light);
+    }
+
+    .availability {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 13px;
+      margin-bottom: 24px;
+      border: 1px solid var(--border-dark);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      color: var(--text-light);
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--success);
+      box-shadow: 0 0 0 0 rgba(16,185,129,0.55);
+      animation: pulse-dot 1.9s infinite;
+      flex: 0 0 auto;
+    }
+
+    @keyframes pulse-dot {
+      0% {
+        box-shadow: 0 0 0 0 rgba(16,185,129,0.55);
+      }
+      70% {
+        box-shadow: 0 0 0 9px rgba(16,185,129,0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(16,185,129,0);
+      }
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .trust-strip {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px 14px;
+      margin-top: 30px;
+      color: rgba(250,250,250,0.72);
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .trust-strip span:not(:last-child)::after {
+      content: "·";
+      margin-left: 14px;
+      color: rgba(250,250,250,0.28);
+    }
+
+    .portrait-card {
+      justify-self: end;
+      width: min(100%, 420px);
+      padding: 12px;
+      border: 1px solid var(--border-dark);
+      border-radius: 28px;
+      background: var(--card-dark);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+    }
+
+    .portrait-frame {
+      overflow: hidden;
+      border-radius: 20px;
+      aspect-ratio: 4 / 5;
+      background: var(--card-dark);
+    }
+
+    .portrait-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .portrait-caption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 16px 4px 2px;
+      color: rgba(250,250,250,0.72);
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+
+    .portrait-caption strong {
+      display: block;
+      color: var(--text-light);
+      font-size: 0.98rem;
+    }
+
+    .trust-bar {
+      margin-top: -1px;
+      border-top: 1px solid var(--border-dark);
+      border-bottom: 1px solid var(--border-light);
+      background: #FFFFFF;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .stat-card {
+      padding: 28px 24px;
+      border-right: 1px solid var(--border-light);
+    }
+
+    .stat-card:last-child {
+      border-right: 0;
+    }
+
+    .stat-value {
+      display: block;
+      color: var(--text-dark);
+      font-size: 2.1rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .stat-label {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted-dark);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .urgency-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.94fr) minmax(280px, 0.56fr);
+      gap: 56px;
+      align-items: center;
+    }
+
+    .urgency-panel {
+      padding: 34px;
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      background: #FFFFFF;
+      box-shadow: var(--shadow-card);
+    }
+
+    .urgency-panel p {
+      color: var(--muted-dark);
+      font-size: 1rem;
+    }
+
+    .mini-list {
+      display: grid;
+      gap: 14px;
+      margin: 24px 0 28px;
+    }
+
+    .mini-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: var(--text-dark);
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .tick {
+      display: inline-flex;
+      width: 22px;
+      height: 22px;
+      flex: 0 0 22px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(16,185,129,0.12);
+      color: var(--success);
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      background: #FFFFFF;
+      box-shadow: var(--shadow-card);
+      transition: transform 200ms var(--ease), box-shadow 200ms var(--ease), border-color 200ms var(--ease);
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(255,107,53,0.28);
+    }
+
+    .project-card {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-media {
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: #F6F6F6;
+    }
+
+    .project-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 400ms var(--ease);
+    }
+
+    .project-card:hover .project-media img {
+      transform: scale(1.035);
+    }
+
+    .project-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 26px;
+    }
+
+    .tag {
+      display: inline-flex;
+      width: fit-content;
+      margin-bottom: 14px;
+      color: var(--accent);
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .project-body p {
+      margin-top: 12px;
+      color: var(--muted-dark);
+      font-size: 0.98rem;
+      line-height: 1.62;
+    }
+
+    .project-link {
+      margin-top: auto;
+      padding-top: 22px;
+      color: var(--text-dark);
+      font-size: 0.95rem;
+      font-weight: 800;
+    }
+
+    .section-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 42px;
+      color: var(--muted-dark);
+      font-size: 0.94rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .niche-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .niche-card {
+      padding: 26px;
+    }
+
+    .niche-icon {
+      display: block;
+      margin-bottom: 18px;
+      font-size: 1.8rem;
+      line-height: 1;
+    }
+
+    .niche-card p {
+      margin-top: 10px;
+      color: var(--muted-dark);
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .process-card {
+      padding: 28px;
+      min-height: 100%;
+    }
+
+    .step {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 22px;
+      border-radius: 50%;
+      background: var(--bg-dark);
+      color: #FFFFFF;
+      font-size: 0.95rem;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .process-card p {
+      margin-top: 12px;
+      color: var(--muted-dark);
+      font-size: 0.95rem;
+      line-height: 1.58;
+    }
+
+    .pricing-banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      width: fit-content;
+      max-width: 100%;
+      margin: 0 auto 28px;
+      padding: 12px 16px;
+      border: 1px solid rgba(255,107,53,0.24);
+      border-radius: 999px;
+      background: rgba(255,107,53,0.08);
+      color: var(--text-dark);
+      font-size: 0.92rem;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .price-card {
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+      position: relative;
+    }
+
+    .price-card.featured {
+      border-color: rgba(255,107,53,0.58);
+      transform: scale(1.025);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 18px 48px rgba(255,107,53,0.12);
+    }
+
+    .price-card.featured:hover {
+      transform: translateY(-4px) scale(1.025);
+    }
+
+    .popular {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #FFFFFF;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .best-for {
+      min-height: 74px;
+      margin: 16px 0 24px;
+      color: var(--muted-dark);
+      font-size: 0.94rem;
+      line-height: 1.55;
+    }
+
+    .price {
+      display: flex;
+      align-items: flex-end;
+      gap: 10px;
+      margin-bottom: 26px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .price strong {
+      color: var(--text-dark);
+      font-size: 3.2rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      line-height: 0.9;
+    }
+
+    .price span {
+      color: var(--muted-dark);
+      font-size: 0.88rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .feature-title {
+      margin-bottom: 12px;
+      color: var(--text-dark);
+      font-size: 0.92rem;
+      font-weight: 800;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 11px;
+      margin-bottom: 28px;
+    }
+
+    .feature-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: var(--muted-dark);
+      font-size: 0.94rem;
+      line-height: 1.46;
+    }
+
+    .feature-list .tick {
+      width: 20px;
+      height: 20px;
+      flex-basis: 20px;
+      font-size: 0.72rem;
+      margin-top: 1px;
+    }
+
+    .price-card .btn {
+      margin-top: auto;
+    }
+
+    .card-note {
+      margin-top: 12px;
+      text-align: center;
+      color: var(--muted-dark);
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    .risk-strip {
+      margin-top: 30px;
+      padding: 22px 26px;
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      background: var(--bg-dark);
+      color: rgba(250,250,250,0.76);
+      box-shadow: 0 18px 52px rgba(0,0,0,0.12);
+      text-align: center;
+    }
+
+    .risk-strip strong {
+      color: var(--text-light);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 360px minmax(0, 1fr);
+      gap: 62px;
+      align-items: center;
+    }
+
+    .about-photo {
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-card);
+      aspect-ratio: 4 / 5;
+      background: #F4F4F4;
+    }
+
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .about-copy p {
+      margin-top: 20px;
+      color: var(--muted-dark);
+      font-size: 1.05rem;
+      line-height: 1.72;
+    }
+
+    .signature {
+      margin-top: 24px;
+      color: var(--text-dark);
+      font-weight: 800;
+    }
+
+    .faq-list {
+      max-width: 900px;
+      margin: 0 auto;
+      border-top: 1px solid var(--border-light);
+    }
+
+    details {
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 24px 0;
+      color: var(--text-dark);
+      font-size: 1.22rem;
+      font-weight: 800;
+      line-height: 1.35;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      flex: 0 0 30px;
+      border: 1px solid var(--border-light);
+      border-radius: 50%;
+      color: var(--accent);
+      font-size: 1.1rem;
+      line-height: 1;
+      transition: transform 200ms var(--ease);
+    }
+
+    details[open] summary::after {
+      content: "−";
+      transform: rotate(180deg);
+    }
+
+    details p {
+      max-width: 760px;
+      padding: 0 0 24px;
+      color: var(--muted-dark);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .final-cta {
+      padding: 118px 0;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      text-align: center;
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .final-cta h2 {
+      color: var(--text-light);
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .final-cta .lead {
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+      color: var(--muted-light);
+    }
+
+    .final-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .email-link {
+      color: rgba(250,250,250,0.78);
+      font-weight: 800;
+      text-decoration: underline;
+      text-decoration-color: rgba(250,250,250,0.22);
+      text-underline-offset: 4px;
+    }
+
+    .final-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: 28px;
+      color: rgba(250,250,250,0.72);
+      font-size: 0.95rem;
+      font-weight: 800;
+    }
+
+    footer {
+      padding: 58px 0 36px;
+      background: var(--bg-dark);
+      color: var(--text-light);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 180px 240px;
+      gap: 42px;
+      padding-bottom: 38px;
+    }
+
+    .footer-tagline {
+      max-width: 470px;
+      margin-top: 14px;
+      color: rgba(250,250,250,0.62);
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    .footer-title {
+      margin-bottom: 14px;
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 9px;
+      color: rgba(250,250,250,0.68);
+      font-size: 0.94rem;
+      font-weight: 700;
+    }
+
+    .footer-links a:hover {
+      color: var(--text-light);
+    }
+
+    .footer-bottom {
+      padding-top: 28px;
+      border-top: 1px solid var(--border-dark);
+      color: rgba(250,250,250,0.48);
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+
+    .float-wa {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 20;
+      display: none;
+      width: 56px;
+      height: 56px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--whatsapp);
+      color: #07160C;
+      box-shadow: 0 12px 30px rgba(37,211,102,0.38);
+    }
+
+    .float-wa svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    @media (max-width: 1024px) {
+      h1 {
+        font-size: 4.4rem;
+      }
+
+      h2 {
+        font-size: 3.35rem;
+      }
+
+      .hero-grid,
+      .urgency-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 62px;
+      }
+
+      .portrait-card {
+        justify-self: start;
+        max-width: 360px;
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 680px;
+        margin: 0 auto;
+      }
+
+      .price-card.featured {
+        transform: none;
+      }
+
+      .price-card.featured:hover {
+        transform: translateY(-4px);
+      }
+
+      .about-photo {
+        max-width: 360px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        width: min(100% - 40px, var(--container));
+      }
+
+      h1 {
+        font-size: 3.25rem;
+      }
+
+      h2 {
+        font-size: 2.55rem;
+      }
+
+      .lead {
+        font-size: 1.08rem;
+      }
+
+      .stat-value {
+        font-size: 1.8rem;
+      }
+
+      .price strong {
+        font-size: 2.65rem;
+      }
+
+      summary {
+        font-size: 1.1rem;
+      }
+
+      .section {
+        padding: 80px 0;
+      }
+
+      .section-tight {
+        padding: 60px 0;
+      }
+
+      .nav-inner {
+        min-height: 66px;
+      }
+
+      .nav-links,
+      .nav-actions .btn {
+        display: none;
+      }
+
+      .menu-button {
+        display: inline-flex;
+      }
+
+      .nav-links {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        top: 74px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 14px;
+        border: 1px solid var(--border-dark);
+        border-radius: 16px;
+        background: rgba(10,10,10,0.98);
+        box-shadow: 0 24px 60px rgba(0,0,0,0.3);
+      }
+
+      .nav-links a {
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid var(--border-dark);
+      }
+
+      .nav-links a:last-child {
+        border-bottom: 0;
+      }
+
+      .nav-toggle:checked ~ .nav-links {
+        display: flex;
+      }
+
+      .nav-toggle:checked + .menu-button span {
+        background: transparent;
+      }
+
+      .nav-toggle:checked + .menu-button span::before {
+        top: 0;
+        transform: rotate(45deg);
+        background: currentColor;
+      }
+
+      .nav-toggle:checked + .menu-button span::after {
+        top: 0;
+        transform: rotate(-45deg);
+        background: currentColor;
+      }
+
+      .hero-grid {
+        gap: 42px;
+      }
+
+      .hero-actions,
+      .final-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .hero-actions .btn,
+      .final-actions .btn {
+        width: 100%;
+      }
+
+      .trust-strip {
+        display: grid;
+        gap: 10px;
+      }
+
+      .trust-strip span::after {
+        display: none;
+      }
+
+      .stat-grid,
+      .work-grid,
+      .niche-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stat-card {
+        border-right: 0;
+        border-bottom: 1px solid var(--border-light);
+        padding: 24px 0;
+      }
+
+      .stat-card:last-child {
+        border-bottom: 0;
+      }
+
+      .urgency-panel,
+      .project-body,
+      .niche-card,
+      .process-card,
+      .price-card {
+        padding: 24px;
+      }
+
+      .section-cta {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .best-for {
+        min-height: auto;
+      }
+
+      .pricing-banner {
+        align-items: flex-start;
+        border-radius: 16px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .float-wa {
+        display: flex;
+      }
+    }
+
+    @media (max-width: 420px) {
+      body {
+        font-size: 1rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 2.15rem;
+      }
+
+      .price strong {
+        font-size: 2.25rem;
+      }
+
+      .container {
+        width: min(100% - 32px, var(--container));
+      }
+
+      .logo {
+        font-size: 0.94rem;
+      }
+
+      .availability,
+      .pricing-banner,
+      .final-note {
+        font-size: 0.82rem;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-bottom: 56px;
+      }
+
+      .portrait-card {
+        max-width: 100%;
+      }
+
+      .price {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+      }
+    }
+  </style>
 </head>
 <body>
-
-<!-- ============================================= -->
-<!-- SECTION: NAVIGATION BAR                        -->
-<!-- ============================================= -->
-<header class="nav-wrap" id="navWrap">
-  <div class="max-w-[1200px] mx-auto px-5 md:px-8 py-4 flex items-center justify-between">
-    <a href="#top" class="flex items-baseline gap-2">
-      <span class="font-bold text-lg md:text-xl text-primary">Rounab</span>
-      <span class="text-sm text-muted font-normal hidden sm:inline">· Lead Revive</span>
-    </a>
-    <nav class="hidden lg:flex items-center gap-9">
-      <a href="#work" class="nav-link">Work</a>
-      <a href="#process" class="nav-link">Process</a>
-      <a href="#pricing" class="nav-link">Pricing</a>
-      <a href="#faq" class="nav-link">FAQ</a>
-      <a href="#contact" class="nav-link">Contact</a>
-    </nav>
-    <div class="flex items-center gap-2">
-      <!-- REPLACE WhatsApp number -->
-      <a href="https://wa.me/918282036966" target="_blank" rel="noopener" class="hidden md:inline-flex btn btn-accent" style="padding: 0.6rem 1.1rem; min-height: 44px; font-size: 0.88rem;">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Message on WhatsApp
-      </a>
-      <button id="menuBtn" class="lg:hidden p-2" style="min-width: 44px; min-height: 44px;" aria-label="Open menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      </button>
-    </div>
-  </div>
-</header>
-
-<!-- Mobile Menu -->
-<div class="mobile-menu-backdrop" id="menuBackdrop"></div>
-<aside class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
-  <div class="flex justify-between items-center mb-6">
-    <div class="flex items-baseline gap-2">
-      <span class="font-bold text-lg text-primary">Rounab</span>
-      <span class="text-sm text-muted">· Lead Revive</span>
-    </div>
-    <button id="menuClose" class="p-2" style="min-width: 44px; min-height: 44px;" aria-label="Close menu">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 6L6 18M6 6l12 12"/></svg>
-    </button>
-  </div>
-  <a href="#work" class="mobile-link m-link">Work</a>
-  <a href="#process" class="mobile-link m-link">Process</a>
-  <a href="#pricing" class="mobile-link m-link">Pricing</a>
-  <a href="#faq" class="mobile-link m-link">FAQ</a>
-  <a href="#contact" class="mobile-link m-link">Contact</a>
-  <!-- REPLACE WhatsApp number -->
-  <a href="https://wa.me/918282036966" target="_blank" rel="noopener" class="btn btn-accent mt-6 w-full">Message on WhatsApp</a>
-</aside>
-
-<!-- ============================================= -->
-<!-- SECTION: HERO                                  -->
-<!-- ============================================= -->
-<section id="top" class="hero">
-  <div class="hero-gradient"></div>
-  <div class="max-w-[1200px] mx-auto px-5 md:px-8 w-full relative">
-    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-      <div class="stagger order-2 lg:order-1">
-        <div class="available-badge">
-          <span class="available-dot"></span>
-          <span>Available for new projects</span>
-        </div>
-        <h1 class="display-xl mt-6 mb-5 text-primary">I build websites that turn visitors into customers.</h1>
-        <p class="text-lg md:text-xl text-muted leading-relaxed mb-8 max-w-xl">
-          For restaurants, motels, med spas, jewelers, and small businesses across the United States. You only pay if you love what I build.
-        </p>
-        <div class="hero-ctas flex flex-wrap gap-3 mb-8">
-          <!-- REPLACE WhatsApp number -->
-          <a href="https://wa.me/918282036966" target="_blank" rel="noopener" class="btn btn-primary">Message on WhatsApp →</a>
-          <a href="#work" class="btn btn-outline">See My Work ↓</a>
-        </div>
-        <div class="trust-row">
-          <span>🇮🇳 Based in India</span>
-          <span>🇺🇸 Serving USA</span>
-          <span>💬 WhatsApp First</span>
-        </div>
-      </div>
-      <div class="order-1 lg:order-2">
-        <div class="portrait-wrap stagger">
-          <div class="portrait-blob" style="animation-delay:0s;"></div>
-          <!-- REPLACE: real headshot URL here -->
-          <img src="https://i.imgur.com/O0dYkiG.png" alt="Rounab — Web Designer & Developer" class="portrait-img">
-        </div>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="#top" aria-label="Rounab Lead Revive home">Rounab · Lead Revive</a>
+      <input class="nav-toggle" id="nav-toggle" type="checkbox" aria-label="Toggle navigation">
+      <label class="menu-button" for="nav-toggle" aria-hidden="true"><span></span></label>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-whatsapp" href="https://wa.me/918282036966" target="_blank" rel="noopener">Message on WhatsApp →</a>
       </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- ============================================= -->
-<!-- SECTION: HOW IT WORKS / PROCESS                -->
-<!-- ============================================= -->
-<section id="process" class="py-20 md:py-28 bg-muted-bg">
-  <div class="max-w-[1200px] mx-auto px-5 md:px-8">
-    <div class="max-w-3xl mx-auto text-center mb-14 md:mb-20">
-      <p class="eyebrow mb-4 fade-up">How it works</p>
-      <h2 class="display-lg mb-5 fade-up">A website with zero risk to you</h2>
-      <p class="text-lg text-muted fade-up">No upfront payment. No long contracts. No surprises.</p>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="availability"><span class="dot"></span>Available · 3 slots left for May</div>
+          <h1 id="hero-title">Websites that turn your local customers into loyal regulars.</h1>
+          <p class="lead">Agency-grade websites for Indian small businesses — built fast, priced fair, designed to actually grow your business. No big-agency invoices. No template factories. Just clean, conversion-focused sites built by one developer who gives a damn.</p>
+          <div class="hero-actions">
+            <a class="btn btn-whatsapp" href="https://wa.me/918282036966" target="_blank" rel="noopener">Start on WhatsApp →</a>
+            <a class="btn btn-outline" href="#work">See Live Demos ↓</a>
+          </div>
+          <div class="trust-strip" aria-label="Trust highlights">
+            <span>🇮🇳 Built in India, for India</span>
+            <span>⚡ Live in 5–10 days</span>
+            <span>💬 WhatsApp-first communication</span>
+            <span>🔒 Pay only after preview approval</span>
+          </div>
+        </div>
+        <aside class="portrait-card" aria-label="Portrait of Rounab">
+          <div class="portrait-frame">
+            <img src="https://i.imgur.com/O0dYkiG.png" alt="Rounab, web designer and developer" width="840" height="1050">
+          </div>
+          <div class="portrait-caption">
+            <span><strong>Rounab</strong> Solo founder, India</span>
+            <span>Lead Revive</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="trust-bar" aria-label="Project facts">
+      <div class="container stat-grid">
+        <div class="stat-card">
+          <span class="stat-value">5–10 days</span>
+          <span class="stat-label">Average delivery</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">₹15,000+</span>
+          <span class="stat-label">Starting price</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">Mobile-first</span>
+          <span class="stat-label">Built for Indian internet</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">100%</span>
+          <span class="stat-label">Risk-reversal guarantee</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="why-title">
+      <div class="container urgency-grid">
+        <div>
+          <p class="eyebrow">Why this matters</p>
+          <h2 id="why-title">Your competitor's customers are finding them online. Yours can't find you.</h2>
+          <p class="lead">Every day a customer in your city Googles "best [your business] near me" — and lands on someone else's website. Not yours. Most Indian small businesses still rely on Justdial, an old Facebook page, or word of mouth. That's leaving real money on the table — money that goes to whoever invested in a proper website first.</p>
+          <p class="lead">I help small Indian businesses fix that. One website at a time.</p>
+        </div>
+        <div class="urgency-panel">
+          <p><strong>What a proper site changes:</strong></p>
+          <ul class="mini-list">
+            <li><span class="tick">✓</span>Customers can trust you before calling.</li>
+            <li><span class="tick">✓</span>Your WhatsApp gets warmer leads, not random questions.</li>
+            <li><span class="tick">✓</span>You look premium without paying agency overhead.</li>
+          </ul>
+          <a class="btn btn-whatsapp btn-wide" href="https://wa.me/918282036966" target="_blank" rel="noopener">Fix this on WhatsApp →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Proof, not promises</p>
+          <h2 id="work-title">Recent work</h2>
+          <p class="lead">Real, live demo sites. Tap any to explore.</p>
+        </div>
+        <div class="work-grid">
+          <article class="card project-card">
+            <div class="project-media">
+              <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800" alt="Magnolia Inn & Suites website screenshot" width="800" height="500" loading="lazy">
+            </div>
+            <div class="project-body">
+              <span class="tag">Hospitality</span>
+              <h3>Magnolia Inn &amp; Suites</h3>
+              <p>Direct booking site that cuts dependency on aggregators like MMT and Booking.com. Built for a family-run motel.</p>
+              <a class="project-link" href="https://motelwebsite.rounab.com" target="_blank" rel="noopener">View Live Demo →</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-media">
+              <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800" alt="Shreenath Jewelers website screenshot" width="800" height="500" loading="lazy">
+            </div>
+            <div class="project-body">
+              <span class="tag">Retail · Luxury</span>
+              <h3>Shreenath Jewelers</h3>
+              <p>Premium showcase site for a third-generation jeweller. Built for bridal-season foot traffic and trust-building.</p>
+              <a class="project-link" href="https://jewelleryshop-website.rounab.com" target="_blank" rel="noopener">View Live Demo →</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-media">
+              <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=800" alt="Radiance Med Spa website screenshot" width="800" height="500" loading="lazy">
+            </div>
+            <div class="project-body">
+              <span class="tag">Wellness</span>
+              <h3>Radiance Med Spa</h3>
+              <p>Booking-focused site with treatment galleries — the kind of feel that justifies premium pricing.</p>
+              <a class="project-link" href="https://medspa.rounab.com/" target="_blank" rel="noopener">View Live Demo →</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-media">
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" alt="Saffron Kitchen & Bar website screenshot" width="800" height="500" loading="lazy">
+            </div>
+            <div class="project-body">
+              <span class="tag">Restaurant</span>
+              <h3>Saffron Kitchen &amp; Bar</h3>
+              <p>Modern restaurant site with menu, reservations, and Google Maps integration. The format I'd build for any café or restaurant in your city.</p>
+              <a class="project-link" href="https://resturant-demo.rounab.com/" target="_blank" rel="noopener">View Live Demo →</a>
+            </div>
+          </article>
+        </div>
+        <div class="section-cta">
+          <span>Open any demo and judge for yourself.</span>
+          <a class="btn btn-whatsapp" href="https://wa.me/918282036966" target="_blank" rel="noopener">Ask for a similar site →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="niches-title">
+      <div class="container">
+        <div class="section-header center">
+          <p class="eyebrow">Built for local operators</p>
+          <h2 id="niches-title">Built for these Indian businesses</h2>
+          <p class="lead">Small teams (1–10 people) in Tier 1 &amp; Tier 2 cities. The businesses that have everything except a proper website.</p>
+        </div>
+        <div class="niche-grid">
+          <article class="card niche-card">
+            <span class="niche-icon">🍽️</span>
+            <h3>Restaurants &amp; Cafés</h3>
+            <p>Menus, reservations, Zomato-killer direct ordering.</p>
+          </article>
+          <article class="card niche-card">
+            <span class="niche-icon">💇</span>
+            <h3>Salons &amp; Beauty Parlours</h3>
+            <p>Online booking, services showcase, WhatsApp reminders.</p>
+          </article>
+          <article class="card niche-card">
+            <span class="niche-icon">🦷</span>
+            <h3>Dental &amp; Medical Clinics</h3>
+            <p>Appointment requests, doctor profiles, patient trust.</p>
+          </article>
+          <article class="card niche-card">
+            <span class="niche-icon">💎</span>
+            <h3>Jewellers &amp; Boutiques</h3>
+            <p>Premium catalogue feel, bridal/festive collection pages.</p>
+          </article>
+          <article class="card niche-card">
+            <span class="niche-icon">🏋️</span>
+            <h3>Gyms &amp; Fitness Studios</h3>
+            <p>Class schedules, membership signups, trainer profiles.</p>
+          </article>
+          <article class="card niche-card">
+            <span class="niche-icon">🎓</span>
+            <h3>Coaching Institutes &amp; Tutors</h3>
+            <p>Courses, batch info, lead capture forms.</p>
+          </article>
+        </div>
+        <div class="section-cta">
+          <span>Not on the list? If your customers search online, this still applies.</span>
+          <a class="btn btn-whatsapp" href="https://wa.me/918282036966" target="_blank" rel="noopener">Check fit on WhatsApp →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-header center">
+          <p class="eyebrow">No awkward agency drama</p>
+          <h2 id="process-title">A simple, no-risk process</h2>
+          <p class="lead">Four steps. No upfront payment until you approve the preview.</p>
+        </div>
+        <div class="process-grid">
+          <article class="card process-card">
+            <span class="step">1</span>
+            <h3>WhatsApp chat</h3>
+            <p>15 minutes. You tell me about your business, your customers, what you need.</p>
+          </article>
+          <article class="card process-card">
+            <span class="step">2</span>
+            <h3>I build your site</h3>
+            <p>In 5–10 days, depending on plan. Real design, real copy. No templates.</p>
+          </article>
+          <article class="card process-card">
+            <span class="step">3</span>
+            <h3>Live preview</h3>
+            <p>I send you the link. Show your spouse, your CA, anyone. Take your time.</p>
+          </article>
+          <article class="card process-card">
+            <span class="step">4</span>
+            <h3>You approve, I launch</h3>
+            <p>Once you approve, you pay and I deploy on your domain. If you don't like it, you walk away. No fees.</p>
+          </article>
+        </div>
+        <div class="section-cta">
+          <span>Start with a 15-minute WhatsApp chat.</span>
+          <a class="btn btn-whatsapp" href="https://wa.me/918282036966" target="_blank" rel="noopener">Start on WhatsApp →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <div class="section-header center">
+          <p class="eyebrow">Pricing</p>
+          <h2 id="pricing-title">Honest pricing. Pick what fits your business.</h2>
+          <p class="lead">One-time payment. No hidden fees. Pay only after you approve the live preview.</p>
+        </div>
+        <div class="pricing-banner">⚡ <span><strong>Limited slots:</strong> I take only 5 new builds per month to keep quality high. 3 slots left for May.</span></div>
+        <div class="pricing-grid">
+          <article class="card price-card">
+            <h3>Starter</h3>
+            <p class="best-for"><strong>Best for:</strong> New businesses, side hustles, anyone who needs to look real online.</p>
+            <div class="price"><strong>₹15,000</strong><span>one-time</span></div>
+            <p class="feature-title">What you get:</p>
+            <ul class="feature-list">
+              <li><span class="tick">✓</span>1–2 page custom website (not a template)</li>
+              <li><span class="tick">✓</span>Mobile-first, loads under 2 seconds</li>
+              <li><span class="tick">✓</span>WhatsApp button + contact form</li>
+              <li><span class="tick">✓</span>Hosted free on Vercel</li>
+              <li><span class="tick">✓</span>Delivered in 3–5 days</li>
+              <li><span class="tick">✓</span>Free revisions until you're happy</li>
+              <li><span class="tick">✓</span>You own everything</li>
+            </ul>
+            <a class="btn btn-whatsapp btn-wide" href="https://wa.me/918282036966" target="_blank" rel="noopener">Start on WhatsApp →</a>
+          </article>
+
+          <article class="card price-card featured">
+            <span class="popular">Most Popular</span>
+            <h3>Growth</h3>
+            <p class="best-for"><strong>Best for:</strong> Established small businesses ready to bring in real online customers.</p>
+            <div class="price"><strong>₹35,000</strong><span>one-time</span></div>
+            <p class="feature-title">Everything in Starter, plus:</p>
+            <ul class="feature-list">
+              <li><span class="tick">✓</span>3–4 page custom website</li>
+              <li><span class="tick">✓</span>About, Services, Gallery sections</li>
+              <li><span class="tick">✓</span>Booking / inquiry form</li>
+              <li><span class="tick">✓</span>Domain connection (.com / .in)</li>
+              <li><span class="tick">✓</span>Business email setup (you@yourbusiness.com)</li>
+              <li><span class="tick">✓</span>Google Maps + WhatsApp integration</li>
+              <li><span class="tick">✓</span>Basic on-page SEO</li>
+              <li><span class="tick">✓</span>Delivered in 5–7 days</li>
+              <li><span class="tick">✓</span>30 days free support after launch</li>
+            </ul>
+            <a class="btn btn-whatsapp btn-wide" href="https://wa.me/918282036966" target="_blank" rel="noopener">Start on WhatsApp →</a>
+            <p class="card-note">Most clients pick this one.</p>
+          </article>
+
+          <article class="card price-card">
+            <h3>Professional</h3>
+            <p class="best-for"><strong>Best for:</strong> Premium brands, multi-service businesses, anyone who wants a website that looks like it cost ₹2 lakh.</p>
+            <div class="price"><strong>₹45,000 –<br>₹50,000</strong><span>one-time · final price depends on complexity</span></div>
+            <p class="feature-title">Everything in Growth, plus:</p>
+            <ul class="feature-list">
+              <li><span class="tick">✓</span>Fully dynamic, startup-grade UI/UX</li>
+              <li><span class="tick">✓</span>Online booking system (real-time slots)</li>
+              <li><span class="tick">✓</span>CMS-driven photo gallery (you can update it yourself)</li>
+              <li><span class="tick">✓</span>Google Maps + business hours + reviews integration</li>
+              <li><span class="tick">✓</span>Team / About / Testimonials pages</li>
+              <li><span class="tick">✓</span>Custom domain + business email</li>
+              <li><span class="tick">✓</span>Full SEO optimisation + Google Search Console setup</li>
+              <li><span class="tick">✓</span>Google Analytics dashboard</li>
+              <li><span class="tick">✓</span>Delivered in 7–10 days</li>
+              <li><span class="tick">✓</span>60 days free priority support</li>
+              <li><span class="tick">✓</span>Priority WhatsApp line for issues</li>
+            </ul>
+            <a class="btn btn-whatsapp btn-wide" href="https://wa.me/918282036966" target="_blank" rel="noopener">Start on WhatsApp →</a>
+          </article>
+        </div>
+        <div class="risk-strip">🔒 <strong>Zero-risk promise:</strong> I show you the live preview before you pay a single rupee. If you don't love it, you walk away. No invoices, no follow-ups, no hard feelings.</div>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-photo">
+          <img src="https://i.imgur.com/O0dYkiG.png" alt="Portrait of Rounab" width="720" height="900" loading="lazy">
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow">About Rounab</p>
+          <h2 id="about-title">A developer, not a salesman.</h2>
+          <p>I'm Rounab. I'm 19. I started Lead Revive after watching dozens of brilliant Indian small businesses — restaurants, clinics, salons — lose customers every day to whoever ranked higher on Google.</p>
+          <p>Most of them were quoted ₹80,000–₹1.5 lakh by some agency for a basic website. Most of them gave up. That's the gap I fill.</p>
+          <p>I'm one developer. No middlemen, no junior team, no overhead. That's how the pricing works. The quality? Open any of my demos above and judge for yourself.</p>
+          <p class="signature">— Rounab</p>
+          <div class="section-cta" style="justify-content:flex-start;margin-top:30px;">
+            <a class="btn btn-whatsapp" href="https://wa.me/918282036966" target="_blank" rel="noopener">Message Rounab on WhatsApp →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-header center">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">Questions Indian business owners ask first</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>How are your prices this low?</summary>
+            <p>I'm a solo developer, not an agency. No office rent, no sales team, no project managers taking a cut. Same quality as a ₹1 lakh agency build — at a fraction of the price. Open my demos above and judge for yourself.</p>
+          </details>
+          <details>
+            <summary>Why pay only after preview?</summary>
+            <p>Trust is earned, not promised. I'd rather show you real work than send a quotation PDF. If my site doesn't beat what you have today, you shouldn't pay. That's the whole deal.</p>
+          </details>
+          <details>
+            <summary>Do I need to know technical stuff?</summary>
+            <p>Zero. We chat on WhatsApp in plain Hindi or English. You send me your business info, photos, logo (or I help you make one). I handle everything else.</p>
+          </details>
+          <details>
+            <summary>How long does it take?</summary>
+            <p>3–10 days depending on the plan. Starter: 3–5 days. Growth: 5–7 days. Professional: 7–10 days.</p>
+          </details>
+          <details>
+            <summary>What about hosting and maintenance?</summary>
+            <p>Hosting is free on Vercel (included). If you want me to handle updates and edits after launch, I offer maintenance for ₹999/month. Optional.</p>
+          </details>
+          <details>
+            <summary>Can I get a domain like mybusiness.com or .in?</summary>
+            <p>Yes — included in Growth and Professional plans. Costs around ₹800–₹1,500/year directly to the registrar (you own it).</p>
+          </details>
+          <details>
+            <summary>What if I want to add more pages later?</summary>
+            <p>Easy. Adding pages later is ₹2,500 per page for static, ₹5,000 per page for dynamic. No lock-in.</p>
+          </details>
+          <details>
+            <summary>Why should I trust a 19-year-old?</summary>
+            <p>Fair question. Don't trust the age — judge the work. Open the four live demos above. They're real, deployed, and live. If they look like ₹1 lakh agency work, that's because that's the standard I build to.</p>
+          </details>
+          <details>
+            <summary>Do you do logos / branding too?</summary>
+            <p>Basic logos: yes, included in Growth and Professional. Full brand identity: not my main offer, but I can connect you with someone good.</p>
+          </details>
+          <details>
+            <summary>Can I see a payment receipt / GST invoice?</summary>
+            <p>Yes — proper invoices on every project.</p>
+          </details>
+        </div>
+        <div class="section-cta">
+          <span>Still unsure? Send one message. No sales pressure.</span>
+          <a class="btn btn-whatsapp" href="https://wa.me/918282036966" target="_blank" rel="noopener">Ask on WhatsApp →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">Your next customer is already searching online.</h2>
+        <p class="lead">Make sure they find a website worth their trust.</p>
+        <div class="final-actions">
+          <a class="btn btn-whatsapp" href="https://wa.me/918282036966" target="_blank" rel="noopener">Start on WhatsApp →</a>
+          <a class="email-link" href="mailto:rounab@rounab.com">or email rounab@rounab.com</a>
+        </div>
+        <div class="final-note"><span class="dot"></span>3 slots left for May · Free preview before you pay</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="#top">Rounab · Lead Revive</a>
+          <p class="footer-tagline">Websites that bring real customers to Indian small businesses. Pay only after you approve.</p>
+        </div>
+        <div>
+          <p class="footer-title">Explore</p>
+          <nav class="footer-links" aria-label="Footer navigation">
+            <a href="#work">Work</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#process">Process</a>
+            <a href="#faq">FAQ</a>
+          </nav>
+        </div>
+        <div>
+          <p class="footer-title">Connect</p>
+          <div class="footer-links">
+            <a href="https://wa.me/918282036966" target="_blank" rel="noopener">WhatsApp: +91 82820 36966</a>
+            <a href="mailto:rounab@rounab.com">rounab@rounab.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2025 Rounab · Designed and coded from India 🇮🇳</div>
     </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-      <div class="process-card fade-up">
-        <div class="step-circle mb-5">1</div>
-        <h3 class="font-serif text-2xl mb-3 text-primary">You tell me about your business</h3>
-        <p class="text-body">15-minute WhatsApp chat. I learn your business, your customers, what you need.</p>
-      </div>
-      <div class="process-card fade-up">
-        <div class="step-circle mb-5">2</div>
-        <h3 class="font-serif text-2xl mb-3 text-primary">I build your website — for free</h3>
-        <p class="text-body">In 5–7 days, I build a complete custom website. Real design, real copy, ready to launch.</p>
-      </div>
-      <div class="process-card fade-up">
-        <div class="step-circle mb-5">3</div>
-        <h3 class="font-serif text-2xl mb-3 text-primary">You review and decide</h3>
-        <p class="text-body">I send you the live preview. You show your family, take your time. No pressure.</p>
-      </div>
-      <div class="process-card fade-up">
-        <div class="step-circle mb-5">4</div>
-        <h3 class="font-serif text-2xl mb-3 text-primary">You pay only if you love it</h3>
-        <p class="text-body">If yes, I launch it on your domain. If no, zero cost. You keep the screenshots.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </footer>
 
-<!-- ============================================= -->
-<!-- SECTION: WORK / PROJECTS                       -->
-<!-- To add a new project, copy a PROJECT CARD      -->
-<!-- block below and update the content             -->
-<!-- ============================================= -->
-<section id="work" class="py-20 md:py-28">
-  <div class="max-w-[1200px] mx-auto px-5 md:px-8">
-    <div class="max-w-3xl mb-14 md:mb-16">
-      <p class="eyebrow mb-4 fade-up">Portfolio</p>
-      <h2 class="display-lg mb-5 fade-up">Recent Work</h2>
-      <p class="text-lg text-muted fade-up">Live demo websites I've built. Tap any one to explore.</p>
-    </div>
-
-    <!-- =========================================== -->
-    <!-- PROJECT CARDS — ADD NEW PROJECTS HERE        -->
-    <!-- Copy one card block below to add a project   -->
-    <!-- =========================================== -->
-    <div class="grid md:grid-cols-2 gap-6">
-
-      <!-- PROJECT CARD START -->
-      <article class="project-card fade-up">
-        <div class="project-img-wrap">
-          <!-- REPLACE: screenshot of motel demo -->
-          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800" alt="Magnolia Inn & Suites website screenshot" class="project-img" loading="lazy">
-        </div>
-        <div class="p-6 flex flex-col flex-1">
-          <span class="project-tag mb-2">Hospitality</span>
-          <h3 class="font-serif text-2xl mb-2 text-primary">Magnolia Inn & Suites</h3>
-          <p class="text-body mb-5 flex-1">Direct booking site for a family-owned motel in Georgia. Saves 15–18% on Expedia commissions.</p>
-          <a href="https://motelwebsite.rounab.com" target="_blank" rel="noopener" class="project-link">View Live Demo →</a>
-        </div>
-      </article>
-      <!-- PROJECT CARD END -->
-
-      <!-- PROJECT CARD START -->
-      <article class="project-card fade-up">
-        <div class="project-img-wrap">
-          <!-- REPLACE: screenshot of jewelry demo -->
-          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800" alt="Shreenath Jewelers website screenshot" class="project-img" loading="lazy">
-        </div>
-        <div class="p-6 flex flex-col flex-1">
-          <span class="project-tag mb-2">Retail · Luxury</span>
-          <h3 class="font-serif text-2xl mb-2 text-primary">Shreenath Jewelers</h3>
-          <p class="text-body mb-5 flex-1">Premium site for a third-generation Indian jeweler. Built for bridal season traffic.</p>
-          <a href="https://jewelleryshop-website.rounab.com" target="_blank" rel="noopener" class="project-link">View Live Demo →</a>
-        </div>
-      </article>
-      <!-- PROJECT CARD END -->
-
-      <!-- PROJECT CARD START -->
-      <article class="project-card fade-up">
-        <div class="project-img-wrap">
-          <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=800" alt="Radiance Med Spa website screenshot" class="project-img" loading="lazy">
-        </div>
-        <div class="p-6 flex flex-col flex-1">
-          <span class="project-tag mb-2">Med Spa · Wellness</span>
-          <h3 class="font-serif text-2xl mb-2 text-primary">Radiance Med Spa</h3>
-          <p class="text-body mb-5 flex-1">Luxury med spa site with online booking, treatment galleries, and a premium feel that matches the brand.</p>
-          <a href="https://medspa.rounab.com/" target="_blank" rel="noopener" class="project-link">View Live Demo →</a>
-        </div>
-      </article>
-      <!-- PROJECT CARD END -->
-
-      <!-- PROJECT CARD START -->
-      <article class="project-card fade-up">
-        <div class="project-img-wrap">
-          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" alt="Saffron Kitchen & Bar website screenshot" class="project-img" loading="lazy">
-        </div>
-        <div class="p-6 flex flex-col flex-1">
-          <span class="project-tag mb-2">Restaurant · Dining</span>
-          <h3 class="font-serif text-2xl mb-2 text-primary">Saffron Kitchen & Bar</h3>
-          <p class="text-body mb-5 flex-1">Modern restaurant site with menu showcase, reservation system, and Google Maps integration.</p>
-          <a href="https://resturant-demo.rounab.com/" target="_blank" rel="noopener" class="project-link">View Live Demo →</a>
-        </div>
-      </article>
-      <!-- PROJECT CARD END -->
-
-    </div>
-    <!-- =========================================== -->
-    <!-- END PROJECT CARDS                             -->
-    <!-- =========================================== -->
-  </div>
-</section>
-
-<!-- ============================================= -->
-<!-- SECTION: WHO I BUILD FOR                       -->
-<!-- ============================================= -->
-<section class="py-20 md:py-28 bg-muted-bg">
-  <div class="max-w-[1200px] mx-auto px-5 md:px-8">
-    <div class="max-w-3xl mx-auto text-center mb-14 md:mb-16">
-      <p class="eyebrow mb-4 fade-up">Niches I serve</p>
-      <h2 class="display-lg mb-5 fade-up">From India Serving USA</h2>
-      <p class="text-lg text-muted fade-up">I focus on niches where I can deliver real value — not every business I meet.</p>
-    </div>
-    <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
-      <div class="niche-card fade-up">
-        <span class="niche-emoji">🏨</span>
-        <h3 class="font-semibold text-primary mb-1">Motels & Hotels</h3>
-        <p class="text-sm text-muted">Direct bookings, no OTA commissions.</p>
-      </div>
-      <div class="niche-card fade-up">
-        <span class="niche-emoji">💎</span>
-        <h3 class="font-semibold text-primary mb-1">Jewelry Stores</h3>
-        <p class="text-sm text-muted">Premium feel for bridal and luxury.</p>
-      </div>
-      <div class="niche-card fade-up">
-        <span class="niche-emoji">🍛</span>
-        <h3 class="font-semibold text-primary mb-1">Restaurants</h3>
-        <p class="text-sm text-muted">Menus, orders, and Google visibility.</p>
-      </div>
-      <div class="niche-card fade-up">
-        <span class="niche-emoji">🏥</span>
-        <h3 class="font-semibold text-primary mb-1">Dental & Medical Clinics</h3>
-        <p class="text-sm text-muted">Appointments and patient trust.</p>
-      </div>
-      <div class="niche-card fade-up">
-        <span class="niche-emoji">💅</span>
-        <h3 class="font-semibold text-primary mb-1">Med Spas & Salons</h3>
-        <p class="text-sm text-muted">Bookings that match your brand.</p>
-      </div>
-      <div class="niche-card fade-up">
-        <span class="niche-emoji">🛒</span>
-        <h3 class="font-semibold text-primary mb-1">Grocery & Retail</h3>
-        <p class="text-sm text-muted">Local SEO and simple catalogs.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================= -->
-<!-- SECTION: PRICING                               -->
-<!-- ============================================= -->
-<section id="pricing" class="py-20 md:py-28">
-  <div class="max-w-[1200px] mx-auto px-5 md:px-8">
-    <div class="max-w-3xl mx-auto text-center mb-14 md:mb-16">
-      <p class="eyebrow mb-4 fade-up">Pricing</p>
-      <h2 class="display-lg mb-5 fade-up">Simple, Honest Pricing</h2>
-      <p class="text-lg text-muted fade-up">One-time payment. No hidden fees.</p>
-    </div>
-    <div class="pricing-card fade-up" id="pricingCard">
-      <div class="pricing-badge">PAY ONLY IF YOU APPROVE</div>
-      <div class="text-center mb-8">
-        <div class="flex items-baseline justify-center gap-1 mb-2">
-          <span class="text-2xl text-muted font-medium">$</span>
-          <span class="font-serif text-primary" style="font-size: clamp(3.5rem, 10vw, 5.5rem); line-height: 1;">500</span>
-        </div>
-        <p class="text-muted">starting from · one-time</p>
-      </div>
-      <div class="mb-8">
-        <div class="check-row">
-          <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
-          <span class="text-body">Custom-designed website (not a template)</span>
-        </div>
-        <div class="check-row">
-          <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
-          <span class="text-body">Mobile-first, loads in 2 seconds</span>
-        </div>
-        <div class="check-row">
-          <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
-          <span class="text-body">Up to 2–3 pages</span>
-        </div>
-        <div class="check-row">
-          <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
-          <span class="text-body">Contact forms + WhatsApp integration</span>
-        </div>
-
-        <div class="check-row">
-          <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
-          <span class="text-body">Delivered in 5–7 days</span>
-        </div>
-        <div class="check-row">
-          <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
-          <span class="text-body">Free revisions until you love it</span>
-        </div>
-        <div class="check-row">
-          <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
-          <span class="text-body">You own everything</span>
-        </div>
-      </div>
-      <!-- REPLACE WhatsApp number -->
-      <a href="https://wa.me/918282036966" target="_blank" rel="noopener" class="btn btn-accent w-full">Start a Conversation on WhatsApp</a>
-    </div>
-    <p class="text-center text-sm text-muted mt-8 max-w-xl mx-auto fade-up">
-      Need something custom — e-commerce, multi-language, or booking systems? Message me and I'll quote you directly.
-    </p>
-  </div>
-</section>
-
-<!-- ============================================= -->
-<!-- SECTION: ABOUT                                 -->
-<!-- ============================================= -->
-<section id="about" class="py-20 md:py-28 bg-muted-bg">
-  <div class="max-w-[1100px] mx-auto px-5 md:px-8">
-    <div class="grid lg:grid-cols-5 gap-10 lg:gap-16 items-center">
-      <div class="lg:col-span-2 fade-up">
-        <div class="relative w-full max-w-sm mx-auto" style="aspect-ratio: 1;">
-          <!-- REPLACE: real headshot URL here -->
-          <img src="https://i.imgur.com/O0dYkiG.png" alt="Rounab portrait" class="w-full h-full object-cover rounded-3xl shadow-xl">
-        </div>
-      </div>
-      <div class="lg:col-span-3 fade-up">
-        <p class="eyebrow mb-4">About Rounab</p>
-        <h2 class="display-lg mb-6">A developer, not a salesman</h2>
-        <p class="text-lg text-body leading-relaxed mb-5">
-          Hi — I'm Rounab. I started Lead Revive because I saw how many family-run businesses — motels, restaurants, jewelers — were losing customers to bad websites or none at all. I've always believed a great website shouldn't be a luxury — it should be a given.
-        </p>
-        <p class="text-lg text-body leading-relaxed mb-6">
-          My promise is simple: I build the website first, for free. You only pay if it's better than what you have today. If you don't love it, you owe me nothing. That's the whole deal.
-        </p>
-        <p class="font-serif italic text-xl text-primary">— Rounab</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================= -->
-<!-- SECTION: FAQ                                   -->
-<!-- ============================================= -->
-<section id="faq" class="py-20 md:py-28">
-  <div class="max-w-[820px] mx-auto px-5 md:px-8">
-    <div class="text-center mb-14">
-      <p class="eyebrow mb-4 fade-up">FAQ</p>
-      <h2 class="display-lg fade-up">Questions You Might Have</h2>
-    </div>
-    <div class="fade-up">
-      <div class="faq-item">
-        <button class="faq-btn" aria-expanded="false">
-          <span>Why do you work for free until I approve?</span>
-          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
-        <div class="faq-answer"><p>Because trust is earned, not claimed. I'd rather show you real work than promise it. If my site doesn't beat what you have, you shouldn't pay me. Simple as that.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-btn" aria-expanded="false">
-          <span>How is it that cheap? What's the catch?</span>
-          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
-        <div class="faq-answer"><p>No catch. I'm based in India, so my costs are lower than a US agency's. That means I can charge $500 where they charge $3000, and still make a living. The quality is the same — you can see for yourself in my demos.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-btn" aria-expanded="false">
-          <span>Do you speak English well?</span>
-          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
-        <div class="faq-answer"><p>Yes. I communicate primarily through WhatsApp messages, so everything is clear and in writing. For calls, I'm conversational — but most of my clients prefer WhatsApp anyway.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-btn" aria-expanded="false">
-          <span>How long does it take?</span>
-          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
-        <div class="faq-answer"><p>5 to 7 days from the moment we finish our first chat. I send you a preview on day 3 or 4 so you can give feedback before I finish.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-btn" aria-expanded="false">
-          <span>What do you need from me to get started?</span>
-          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
-        <div class="faq-answer"><p>Almost nothing. A 15-minute WhatsApp chat about your business. Any photos you want included. Your logo if you have one (I can help make one if not). That's it.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-btn" aria-expanded="false">
-          <span>What happens after you deliver?</span>
-          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
-        <div class="faq-answer"><p>You own everything. I hand over all files and login details. If you want me to host and maintain it, I offer that for $15/month. If not, no problem.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-btn" aria-expanded="false">
-          <span>Can I see examples of your work?</span>
-          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
-        <div class="faq-answer"><p>Scroll up — my live demo websites are in the Work section. Tap any of them to explore the real, live sites.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-btn" aria-expanded="false">
-          <span>Why only Indian-owned businesses?</span>
-          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
-        <div class="faq-answer"><p>Because I understand the culture, the values, and what your customers expect. I can talk to you like family. And I can design for audiences that most American agencies miss.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================= -->
-<!-- SECTION: FINAL CTA                             -->
-<!-- ============================================= -->
-<section id="contact" class="py-20 md:py-28 bg-primary relative overflow-hidden">
-  <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 600px 400px at 50% 0%, rgba(5,150,105,0.15) 0%, transparent 70%);"></div>
-  <div class="max-w-[900px] mx-auto px-5 md:px-8 text-center relative fade-up">
-    <p class="eyebrow mb-5" style="color: #34D399;">Let's build something</p>
-    <h2 class="display-lg mb-5" style="color: #fff;">Your next customer is already searching online.</h2>
-    <p class="text-lg mb-10" style="color: #CBD5E1;">Let's make sure they find a website worth their trust.</p>
-    <div class="hero-ctas flex flex-wrap gap-3 justify-center">
-      <!-- REPLACE WhatsApp number -->
-      <a href="https://wa.me/918282036966" target="_blank" rel="noopener" class="btn btn-accent">Message on WhatsApp →</a>
-      <!-- REPLACE: real email address -->
-      <a href="mailto:rounab@rounab.com" class="btn btn-outline-white">Email me</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================= -->
-<!-- SECTION: FOOTER                                -->
-<!-- ============================================= -->
-<footer class="py-14 bg-primary border-t" style="border-color: rgba(255,255,255,0.08);">
-  <div class="max-w-[1200px] mx-auto px-5 md:px-8">
-    <div class="grid md:grid-cols-3 gap-8 mb-10">
-      <div>
-        <div class="flex items-baseline gap-2 mb-3">
-          <span class="font-bold text-lg" style="color: #fff;">Rounab</span>
-          <span class="text-sm" style="color: #94A3B8;">· Lead Revive</span>
-        </div>
-        <p class="text-sm" style="color: #94A3B8; line-height: 1.6;">Websites that bring customers. Pay only if you love them.</p>
-      </div>
-      <div>
-        <h4 class="eyebrow mb-4" style="color: #34D399;">Explore</h4>
-        <div class="flex flex-col gap-2">
-          <a href="#work" class="text-sm hover:text-white transition" style="color: #CBD5E1;">Work</a>
-          <a href="#process" class="text-sm hover:text-white transition" style="color: #CBD5E1;">Process</a>
-          <a href="#pricing" class="text-sm hover:text-white transition" style="color: #CBD5E1;">Pricing</a>
-          <a href="#faq" class="text-sm hover:text-white transition" style="color: #CBD5E1;">FAQ</a>
-        </div>
-      </div>
-      <div>
-        <h4 class="eyebrow mb-4" style="color: #34D399;">Connect</h4>
-        <div class="flex flex-col gap-2">
-          <!-- REPLACE WhatsApp number -->
-          <a href="https://wa.me/918282036966" target="_blank" rel="noopener" class="text-sm hover:text-white transition" style="color: #CBD5E1;">WhatsApp: +91 82820 36966</a>
-          <!-- REPLACE: real email address -->
-          <a href="mailto:rounab@rounab.com" class="text-sm hover:text-white transition" style="color: #CBD5E1;">rounab@rounab.com</a>
-          <span class="text-sm" style="color: #CBD5E1;">Based in India 🇮🇳</span>
-        </div>
-      </div>
-    </div>
-    <div class="pt-6 border-t text-center text-xs" style="border-color: rgba(255,255,255,0.08); color: #64748B;">
-      © 2025 Rounab · Designed and coded by me, from India
-    </div>
-  </div>
-</footer>
-
-<!-- Floating WhatsApp -->
-<!-- REPLACE WhatsApp number -->
-<a href="https://wa.me/918282036966" target="_blank" rel="noopener" class="float-wa" aria-label="Chat on WhatsApp">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
-
-<script>
-// Nav scroll
-const navWrap = document.getElementById('navWrap');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 100) navWrap.classList.add('scrolled');
-  else navWrap.classList.remove('scrolled');
-}, { passive: true });
-
-// Mobile menu
-const menuBtn = document.getElementById('menuBtn');
-const menuClose = document.getElementById('menuClose');
-const mobileMenu = document.getElementById('mobileMenu');
-const backdrop = document.getElementById('menuBackdrop');
-const openMenu = () => { mobileMenu.classList.add('open'); backdrop.classList.add('open'); document.body.style.overflow = 'hidden'; };
-const closeMenu = () => { mobileMenu.classList.remove('open'); backdrop.classList.remove('open'); document.body.style.overflow = ''; };
-menuBtn.addEventListener('click', openMenu);
-menuClose.addEventListener('click', closeMenu);
-backdrop.addEventListener('click', closeMenu);
-document.querySelectorAll('.m-link').forEach(l => l.addEventListener('click', closeMenu));
-
-// Fade up Intersection Observer
-const fadeObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      const siblings = Array.from(entry.target.parentElement.children).filter(el => el.classList.contains('fade-up'));
-      const idx = siblings.indexOf(entry.target);
-      setTimeout(() => entry.target.classList.add('in'), Math.max(0, idx) * 100);
-      fadeObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
-
-// Pricing card glow
-const pricingCard = document.getElementById('pricingCard');
-if (pricingCard) {
-  const glowObserver = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        pricingCard.classList.add('glow');
-        glowObserver.unobserve(pricingCard);
-      }
-    });
-  }, { threshold: 0.4 });
-  glowObserver.observe(pricingCard);
-}
-
-// FAQ accordion
-document.querySelectorAll('.faq-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const item = btn.parentElement;
-    const answer = item.querySelector('.faq-answer');
-    const isOpen = item.classList.contains('open');
-    if (isOpen) {
-      answer.style.maxHeight = '0px';
-      item.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-    } else {
-      item.classList.add('open');
-      answer.style.maxHeight = answer.scrollHeight + 'px';
-      btn.setAttribute('aria-expanded', 'true');
-    }
-  });
-});
-</script>
+  <a class="float-wa" href="https://wa.me/918282036966" target="_blank" rel="noopener" aria-label="Start a WhatsApp chat">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88a9.82 9.82 0 0 1 6.99 2.9 9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.48-8.41"/></svg>
+  </a>
 </body>
 </html>
